@@ -3,18 +3,20 @@ font-family: 'Muli', sans-serif;
 font-family: 'Lora', serif;
 */
 *{
-	zoom: 0.99;
+	zoom: 0.9822;
 }
 body {
-    background-image:url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+	background-image:url("../img/background.jpg");
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
 }
-html {
-    height: 100%
+
+html{
+	height: 100%;
 }
-/* 
-NAViGATION 
+
+/*
+NAViGATION
 */
 .container{
 	background-color: #fff;
@@ -22,22 +24,33 @@ NAViGATION
 }
 .content--news{
 	padding-top: 15px;
-	padding-bottom: 15px; 
+	padding-bottom: 15px;
+}
+.header--pane .container{
+	background: rgba(255,255,255,0.93);
+}
+.header--pane .nav-wrapper{
+	background: rgba(255,255,255,0);
+}
+
+.container--s2{
+	margin-top: 15px;
+	margin-left: 15px;
 }
 
 .logo{
 	padding-right: 25px;
 	width: 95px;
-
+	opacity: 0.85;
+}
+.content--news--back{
+	opacity: 0.93;
+	z-index: 0;
+	position: relative;
 }
 
-
 .logo:hover{
-	font-size: 23px;
-	
-	font-weight: 800;
-	text-transform: uppercase;
-	text-decoration: none;
+	opacity: 1;
 }
 .autoriz--pane{
 	text-align: right;
@@ -56,11 +69,19 @@ NAViGATION
 	text-decoration: none;
 }
 .content--post{
+
+	padding-bottom: 10px;
+	font-size: 21px;
+
+}
+.content--post img{
 	padding-top: 5px;
+}
+.news-content{
+	padding-right: 5px;
 }
 
 .nav-wrapper{
-	margin-top: 10px;
 	padding-bottom: 5px;
 	padding-top: 5px;
 	padding-bottom: 15px;
@@ -77,7 +98,7 @@ img{width:100%;}
 .registration_autorization{
 	font-size: 15px;
 	font-weight: 600;
-	padding-top: 5px	
+	padding-top: 5px
 }
 .nav.navbar-nav{
 	margin: 7.5px -15px;
@@ -92,7 +113,7 @@ img{width:100%;}
 
 
 .navigation__link:hover, .navigation__link:active, .navigation__link:focus{
-color: #093;
+	color: #093;
 	text-decoration: none;
 	margin-right: 30px;
 }
