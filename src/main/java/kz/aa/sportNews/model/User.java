@@ -24,6 +24,9 @@ public class User {
     @Column(name = "login")
     private String login;
 
+    @Column(name = "active")
+    private Boolean isActive;
+
     @Column(name = "password")
     private String password;
 
@@ -37,5 +40,5 @@ public class User {
 
     @Column(columnDefinition = "varchar(32) default 'ADMIN'")
     @Enumerated(EnumType.STRING)
-    private Role roles;
+    private Role role;
 }

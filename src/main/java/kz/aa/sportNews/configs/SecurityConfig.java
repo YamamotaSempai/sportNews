@@ -38,11 +38,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.
                 authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority("ADMIN")
-                .antMatchers("/login", "/", "/registration", "/static/**", "/libs/**", "/css/**", "/img/**", "/img_src/**", "/pages/**").permitAll()
+                .antMatchers("/login", "/", "/registration", "/static/**", "/libs/**", "/css/**", "/img/**", "/img_src/**").permitAll()
 
                 .and().csrf().disable().formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/home", true)
+                .defaultSuccessUrl("/admin/page", true)
                 .usernameParameter("login")
                 .passwordParameter("password")
 
@@ -74,6 +74,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) {
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/img/**", "/libs/**", "/img_src/**", "/page/**");
+                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/img/**", "/libs/**", "/img_src/**");
     }
 }
