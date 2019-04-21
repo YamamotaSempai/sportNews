@@ -17,12 +17,10 @@ public class Post {
     private String content;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable=false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name="category]" +
-            "" +
-            "_id", nullable=false)
+    @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 }
