@@ -3,6 +3,7 @@ package kz.aa.sportNews.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -16,6 +17,9 @@ public class Post {
 
     @Column(length = 10000)
     private String content;
+
+    @Column
+    private Date date;
 
     @ElementCollection
     private List<String> urlImg;

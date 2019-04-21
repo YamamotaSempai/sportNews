@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div th:replace="parts/header :: header-css"></div>
+</head>
+<body>
+
+<!--header part-->
+<div th:replace="parts/header :: header"></div>
+<!--/header-part-->
+
+<!--admin panel-->
+
+<form method="post" enctype="multipart/form-data" th:object="${post}" th:action="@{/admin/create-post}">
+    <p>Название: <label>
+        <input type="text" th:field="*{title}"/>
+    </label></p>
+    <p>Описание: <label>
+        <input type="text" th:field="*{content}"/>
+    </label></p>
+    <p>Дата: <label>
+        <!--<input th:field="${#calendars.format(post.date)}" type="date"/>-->
+        <!--<strong th:text="${#calendars.format(post.date)}"></strong>-->
+        <input type="date" th:value="*{date}" th:field="*{date}"/>
+
+
+    </label></p>
+
+</form>
+
+<!--/admin panel-->
+</body>
+</html>

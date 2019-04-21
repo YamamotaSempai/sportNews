@@ -52,4 +52,12 @@ public class AdminController {
             return "redirect:/admin/page";
         }
     }
+
+    @RequestMapping(value = "admin/page")
+    public String adminPage(Model model){
+
+        model.addAttribute("post", new Post());
+
+        return "admin/page";
+    }
 }
