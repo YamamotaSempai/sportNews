@@ -1,0 +1,27 @@
+.require {
+    color: #666;
+}
+label small {
+    color: #999;
+    font-weight: normal;
+}
+.logo--admin{
+    text-align: center;
+}
+.header--admin{
+    background-color: #428bca;
+}
+.white--text_logo{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Aharoni;
+}
+.small-img{
+    height: 50px;
+    width: 50px;
+}
+
+img{
+    padding-top: 5px;
+    margin-top: 5px;
+}

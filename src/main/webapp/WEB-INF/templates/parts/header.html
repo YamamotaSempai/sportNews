@@ -37,7 +37,7 @@
                     <div class="header--row">
                         <div class="row">
                             <div class="col-md-1">
-                                <a href="#"><img src="../../../img/logo.png" class="logo" alt=""></a>
+                                <a href="#" ><img src="img/logo.png" class="logo" alt=""></a>
                             </div>
                             <div class="col-md-10">
                                 <!-- navigation begin -->
@@ -57,15 +57,9 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="#" class="submenu--link">Документы</a></li>
                                                 <li><a href="#" class="submenu--link">Структура</a></li>
-                                                <li><a href="#" class="submenu--link">Программа развития 2018-2022</a>
-                                                </li>
+                                                <li><a href="#" class="submenu--link">Программа развития 2018-2022</a></li>
                                                 <li><a href="#" class="submenu--link">Инфраструктура</a></li>
-
                                             </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="navigation__link" data-toggle="dropdown">Календарь
-                                                соревнований</a>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#" class="navigation__link" data-toggle="dropdown">Турниры</a>
@@ -73,9 +67,9 @@
                                                 <li><a href="#" class="submenu--link">Мини-футбол/Футзал</a></li>
                                                 <li><a href="#" class="submenu--link">Детско-юношеский Футбол</a></li>
                                                 <li><a href="#" class="submenu--link">Женский Футбол</a></li>
-                                                <li><a href="#" class="submenu--link">Мини-футбол/Футзал среди лиц с
-                                                    ограниченными возможностями</a></li>
+                                                <li><a href="#" class="submenu--link">Мини-футбол/Футзал среди лиц с ограниченными возможностями</a></li>
                                                 <li><a href="#" class="submenu--link">Любительские турниры</a></li>
+                                                <li><a href="#" class="submenu--link">Календарь соревнований</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -112,29 +106,29 @@
             </nav>
             <!-- NAVIGATION END -->
         </div>
+
     </div>
 </div>
-<div th:fragment="header-for-admin-panel">
-    <nav class="nav-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="logo-head">
-                    <div class="col-md-2">
-                        <a th:href="@{/home}" class="logo">kazsauda</a>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="navigation">
-                        <a th:href="@{/admin/page}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">ADMIN
-                            PANEL</a>
-                    </div>
-                </div>
+<!--<div th:fragment="header-for-admin-panel">-->
+    <!--<nav class="nav-wrapper">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="logo-head">-->
+                    <!--<div class="col-md-2">-->
+                        <!--<a th:href="@{/home}" class="logo">kazsauda</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-9">-->
+                    <!--<div class="navigation">-->
+                        <!--<a th:href="@{/admin/page}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">ADMIN-->
+                            <!--PANEL</a>-->
+                    <!--</div>-->
+                <!--</div>-->
 
 
-            </div>
-        </div>
-    </nav>
-</div>
-</div>
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
+<!--</div>-->
 </body>
 </html>

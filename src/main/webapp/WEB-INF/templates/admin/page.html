@@ -3,31 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <div th:replace="parts/header :: header-css"></div>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../../../css/main--admin.css">
 </head>
 <body>
 
 <!--header part-->
-<div th:replace="parts/header :: header"></div>
+    <div class="header--admin">
+
+            <div class="row float-right">
+                <div class="col-sm-11">
+                    <div class="col-md-1">
+                        <a href="#"><img src="../../../img/back.png" alt="back" class="small-img"></a>
+                    </div>
+                    <div class="logo--admin">
+                        <h1 class="white--text_logo">FCKO admin-panel</h1>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
 <!--/header-part-->
 
 <!--admin panel-->
-
 <form method="post" enctype="multipart/form-data" th:object="${post}" th:action="@{/admin/create-post}">
-    <p>Название: <label>
-        <input type="text" th:field="*{title}"/>
-    </label></p>
-    <p>Описание: <label>
-        <input type="text" th:field="*{content}"/>
-    </label></p>
-    <p>Дата: <label>
+
+
+    <!--<p>Название:<label><input type="text" th:field="*{title}"/></label></p>-->
+    <!--<p>Соме:<label><input type="text" th:field="*{content}"/></label></p>-->
+    <!--<p>Дата: <label><input type="date" th:value="*{date}" th:field="*{date}"/>-->
         <!--<input th:field="${#calendars.format(post.date)}" type="date"/>-->
         <!--<strong th:text="${#calendars.format(post.date)}"></strong>-->
-        <input type="date" th:value="*{date}" th:field="*{date}"/>
+    <!--</label></p>-->
 
+    <!-- с ошибкой <div class="form-group has-error">
+                        <label>Название<span class="require">*</span> <small>(This field use in url path.)</small></label>
+                         <input type="text" class="form-control" name="title" th:field="*{title}"/>
+                        <span class="help-block">Field not entered!</span>
+                    </div>
+                    -->
 
-    </label></p>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Создание поста</h1>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label>Название <span class="require">*</span></label>
+                        <input type="text" class="form-control" name="title" th:field="*{title}"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Изображение <span class="require">*</span></label>
+                        <input type="file" class="form-control" name="image"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Контент </label>
+                        <textarea rows="5" class="form-control" name="content" th:field="*{content}"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p><span class="require">*</span> - required fields</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">
+                            Опубликовать
+                        </button>
+                        <button class="btn btn-default">
+                            Отмена
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </form>
 
 <!--/admin panel-->

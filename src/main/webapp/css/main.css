@@ -3,7 +3,7 @@ font-family: 'Muli', sans-serif;
 font-family: 'Lora', serif;
 */
 *{
-	zoom: 0.9822;
+
 }
 body {
 	background-image:url("../img/background.jpg");
@@ -13,11 +13,18 @@ body {
 
 html{
 	height: 100%;
+
+}
+.center--float{
+	text-align: center;
 }
 
 /*
 NAViGATION
 */
+.nav.navbar-nav{
+	width: 900px;
+}
 .container{
 	background-color: #fff;
 	margin-top: 15px;
@@ -71,14 +78,10 @@ NAViGATION
 .content--post{
 
 	padding-bottom: 10px;
-	font-size: 21px;
+
 
 }
 .content--post img{
-	padding-top: 5px;
-}
-.news-content{
-	padding-right: 5px;
 }
 
 .nav-wrapper{
@@ -202,7 +205,7 @@ HEADER
 	color: #FFF;
 }
 
-/* ---------------------- 	
+/* ----------------------
 
 FOOTER
 
@@ -252,4 +255,8 @@ FOOTER
 .footer__copyright{
 	font-size: 12px;
 	color: rgb(137, 137, 137);
+}
+/* ADMINPANE */
+.new--post_form{
+	text-decoration: none;
 }
