@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>ФСКО</title>
@@ -52,6 +52,9 @@
                                                 <div class="news-buttons">
                                                     <button type="button" class="btn btn-outline-danger btn-sm">Читать
                                                     </button>
+                                                </div>
+                                                <div class="news-buttons">
+                                                    <a th:href="@{|/admin/page?id=*{post.id}|}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">Изменить</a>
                                                 </div>
                                             </div>
                                         </div>
