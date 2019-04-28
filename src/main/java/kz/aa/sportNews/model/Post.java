@@ -1,8 +1,11 @@
 package kz.aa.sportNews.model;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -13,11 +16,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty(message = "*Пожалуйста введите название статьи")
     private String title;
 
     @Column(length = 10000)
     private String content;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @NotNull(message = "*Пожалуйста введите дату создания статьи или проведения события")
     @Column
     private Date date;
 
@@ -27,8 +33,4 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
-    private Category category;
 }

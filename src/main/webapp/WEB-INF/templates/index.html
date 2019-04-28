@@ -17,254 +17,37 @@
         <div class="content--news">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="content--post">
+                    <div class="content--post" th:each="post, index : ${posts}">
                         <div class="row mb-2">
                             <div class="col-md-12">
                                 <div class="card bg-success">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/03/clem-onojeghuo-127166-unsplash-1-500x333.jpg">
+                                                <!--<img th:src="@{'/img_src/' + ${post.urlImg.get(0)}}">-->
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="news-title">
-                                                    <a href="#"><h5>Титл</h5></a>
+                                                    <a href="#"><h5 th:text="${post.title}"></h5></a>
                                                 </div>
                                                 <div class="news-cats">
                                                     <ul class="list-unstyled list-inline mb-1">
                                                         <li class="list-inline-item">
                                                             <i class="fa fa-folder-o text-danger"></i>
                                                             <a href="#">
-                                                                <small>Категория</small>
+                                                                <small th:text="${post.user.name + ' ' + post.user.lastName}"></small>
                                                             </a>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <i class="fa fa-folder-o text-danger"></i>
                                                             <a href="#">
-                                                                <small>Автор</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Дата</small>
+                                                                <small th:text="${#dates.format(post.date, 'dd-MM-yyyy')}"></small>
                                                             </a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div class="news-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                                                        omnis iusto doloremque sapiente sequi ipsam adipisci veniam
-                                                        numquam dolorum nihil vitae nam ab minus nobis, qui natus
-                                                        exercitationem, deserunt voluptatibus!</p>
-                                                </div>
-                                                <div class="news-buttons">
-                                                    <button type="button" class="btn btn-outline-danger btn-sm">Читать
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content--post">
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="card bg-success">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/03/clem-onojeghuo-127166-unsplash-1-500x333.jpg">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="news-title">
-                                                    <a href="#"><h5>Титл</h5></a>
-                                                </div>
-                                                <div class="news-cats">
-                                                    <ul class="list-unstyled list-inline mb-1">
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Категория</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Автор</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Дата</small>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="news-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                                                        omnis iusto doloremque sapiente sequi ipsam adipisci veniam
-                                                        numquam dolorum nihil vitae nam ab minus nobis, qui natus
-                                                        exercitationem, deserunt voluptatibus!</p>
-                                                </div>
-                                                <div class="news-buttons">
-                                                    <button type="button" class="btn btn-outline-danger btn-sm">Читать
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content--post">
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="card bg-success">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/03/clem-onojeghuo-127166-unsplash-1-500x333.jpg">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="news-title">
-                                                    <a href="#"><h5>Титл</h5></a>
-                                                </div>
-                                                <div class="news-cats">
-                                                    <ul class="list-unstyled list-inline mb-1">
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Категория</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Автор</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Дата</small>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="news-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                                                        omnis iusto doloremque sapiente sequi ipsam adipisci veniam
-                                                        numquam dolorum nihil vitae nam ab minus nobis, qui natus
-                                                        exercitationem, deserunt voluptatibus!</p>
-                                                </div>
-                                                <div class="news-buttons">
-                                                    <button type="button" class="btn btn-outline-danger btn-sm">Читать
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content--post">
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="card bg-success">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/03/clem-onojeghuo-127166-unsplash-1-500x333.jpg">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="news-title">
-                                                    <a href="#"><h5>Титл</h5></a>
-                                                </div>
-                                                <div class="news-cats">
-                                                    <ul class="list-unstyled list-inline mb-1">
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Категория</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Автор</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Дата</small>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="news-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                                                        omnis iusto doloremque sapiente sequi ipsam adipisci veniam
-                                                        numquam dolorum nihil vitae nam ab minus nobis, qui natus
-                                                        exercitationem, deserunt voluptatibus!</p>
-                                                </div>
-                                                <div class="news-buttons">
-                                                    <button type="button" class="btn btn-outline-danger btn-sm">Читать
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content--post">
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="card bg-success">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/03/clem-onojeghuo-127166-unsplash-1-500x333.jpg">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="news-title">
-                                                    <a href="#"><h5>Титл</h5></a>
-                                                </div>
-                                                <div class="news-cats">
-                                                    <ul class="list-unstyled list-inline mb-1">
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Категория</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Автор</small>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <i class="fa fa-folder-o text-danger"></i>
-                                                            <a href="#">
-                                                                <small>Дата</small>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="news-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-                                                        omnis iusto doloremque sapiente sequi ipsam adipisci veniam
-                                                        numquam dolorum nihil vitae nam ab minus nobis, qui natus
-                                                        exercitationem, deserunt voluptatibus!</p>
+                                                    <p th:text="${post.content}"></p>
                                                 </div>
                                                 <div class="news-buttons">
                                                     <button type="button" class="btn btn-outline-danger btn-sm">Читать
@@ -282,20 +65,8 @@
                         <div class="col-md-12">
                            <div class="center--float"> <nav aria-label="Page navigation example">
                                <ul class="pagination">
-                                   <li class="page-item">
-                                       <a class="page-link" href="#" aria-label="Previous">
-                                           <span aria-hidden="true">«</span>
-                                           <span class="sr-only">Previous</span>
-                                       </a>
-                                   </li>
-                                   <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                   <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                   <li class="page-item">
-                                       <a class="page-link" href="#" aria-label="Next">
-                                           <span aria-hidden="true">»</span>
-                                           <span class="sr-only">Next</span>
-                                       </a>
+                                   <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
+                                       <a class="page-link" th:href="@{|home?page=${pageNumber}|}" th:text=${pageNumber}>1</a>
                                    </li>
                                </ul>
                            </nav></div>

@@ -1,29 +1,42 @@
 package kz.aa.sportNews.controllers;
 
+import kz.aa.sportNews.model.Post;
+import kz.aa.sportNews.service.PostService;
+import kz.aa.sportNews.util.UtilControllers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String mainForAdmin(Model model) {
+    private final PostService postService;
 
-//        Optional<User> user = userService.findCurrentUser();
-//
-//        List<CustomerOrder> customerOrderList = customerOrderService.findAllByConfirmedIsTrue();
+    private int totalPages;
+    @Autowired
+    private UtilControllers utilControllers;
 
-//        model.addAttribute("orders",customerOrderList);
-//        model.addAttribute("user", Objects.requireNonNullElseGet(user, User::new));
-//        model.addAttribute("dombra", new Dombra());
-//        model.addAttribute("cap", new Cap());
-//        model.addAttribute("genderTypes", Gender.values());
-//        model.addAttribute("colorEnum", ColorEnum.values());
-//        model.addAttribute("sizeEnum", SizeEnum.values());
-//        model.addAttribute("materialEnum", MaterialEnum.values());
+    @Autowired
+    public MainController(PostService postService) {
+        this.postService = postService;
+    }
+
+    @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
+    public String mainForAdmin(Model model,
+                               @RequestParam(value = "page", defaultValue = "1") int page) {
+
+        PageRequest pageable = PageRequest.of(page - 1, 12);
+        Page<Post> postOptional = postService.findAll(pageable);
+
+        model.addAttribute("posts", postOptional);
+
+        utilControllers.pageCountNumber(model, postOptional.getTotalPages());
 
         return "index";
     }
