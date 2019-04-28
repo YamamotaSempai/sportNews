@@ -17,14 +17,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     private final PostService postService;
-
-    private int totalPages;
-    @Autowired
-    private UtilControllers utilControllers;
+    private final UtilControllers utilControllers;
 
     @Autowired
-    public MainController(PostService postService) {
+    public MainController(PostService postService, UtilControllers utilControllers) {
         this.postService = postService;
+        this.utilControllers = utilControllers;
     }
 
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)

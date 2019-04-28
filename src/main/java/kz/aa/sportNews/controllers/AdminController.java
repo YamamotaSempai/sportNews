@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.PostConstruct;
 import javax.validation.Valid;
@@ -54,14 +55,15 @@ public class AdminController {
     @RequestMapping(value = "/admin/create-post",
             method = RequestMethod.POST,
             headers = "content-type=multipart/*")
-    public String createItemCap(Model model,
-                                @ModelAttribute("post") @Valid Post post,
-                                @RequestParam("file") MultipartFile file,
-                                BindingResult bindingResult
+    public String createItemCap(@ModelAttribute("post") @Valid Post post,
+                                BindingResult bindingResult,
+                                Model model,
+                                @RequestParam("file") MultipartFile file
     ) throws IOException {
 
         if (bindingResult.hasErrors()) {
-            return "redirect:/admin/page";
+            model.addAttribute("post", post);
+            return "admin/page";
         } else {
             post.setUrlImg(new ArrayList<>(Collections.singleton(utilImage.saveFile(file, uploadPath))));
             post.setUser(userService.findCurrentUser().get());
