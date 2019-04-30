@@ -28,7 +28,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="news-title">
-                                                    <a href="#"><h5 th:text="${post.title}"></h5></a>
+                                                    <a th:href="@{|/admin/page?id=*{post.id}|}"><h5 th:text="${post.title}"></h5></a>
                                                 </div>
                                                 <div class="news-cats">
                                                     <ul class="list-unstyled list-inline mb-1">
@@ -47,13 +47,15 @@
                                                     </ul>
                                                 </div>
                                                 <div class="news-content">
-                                                    <p th:text="${post.content}"></p>
+                                                   <div class="test">
+                                                       <p th:text="${post.content}"></p>
+                                                   </div>
                                                 </div>
                                                 <div class="news-buttons">
                                                     <button type="button" class="btn btn-outline-danger btn-sm">Читать
                                                     </button>
                                                 </div>
-                                                <div class="news-buttons">
+                                                <div class="change-button">
                                                     <a th:href="@{|/admin/page?id=*{post.id}|}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">Изменить</a>
                                                 </div>
                                             </div>
@@ -77,22 +79,18 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="row mb-2">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5>Категории</h5>
-                                            </div>
-                                        </div>
+                    <div class="row">
+                        <div class="search--widget">
+                            <!-- Search Widget -->
+                            <div class="card my-4">
+                                <h5 class="card-header">Поиск</h5>
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Введите слово...">
+                                        <span class="input-group-btn">
+                          <button class="btn btn-secondary" type="button">Искать!</button>
+                    </span>
                                     </div>
-                                </div>
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item list-group-item-action active">Футбол</a>
-                                    <a href="#" class="list-group-item list-group-item-action">Мини футбол</a>
-                                    <a href="#" class="list-group-item list-group-item-action">Че то еще</a>
                                 </div>
                             </div>
                         </div>
@@ -100,12 +98,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-body">
-                                    <img src="http://www.3forty.media/cannix/wp-content/uploads/2018/04/clem-onojeghuo-228522-unsplash-1-768x1153.jpg">
+                                <h5 class="card-header">Мини-галерея</h5>
+                                <div class="card-slider">
+                                    <div class="slider--img"><img src="https://pp.userapi.com/c849336/v849336340/171ec8/Nq7dTZOH1f8.jpg"></div>
+                                    <div class="slider--img"><img src="https://pp.userapi.com/c845521/v845521406/166795/FOH8T19qY_0.jpg"></div>
+                                    <div class="slider--img"><img src="https://pp.userapi.com/c639526/v639526369/14bd9/PR7raKuoiVI.jpg"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -115,15 +117,7 @@
 
 </div>
 
-<!-- SLCKER -->
-<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
-<script type="text/javascript" src="libs/slick/slick.min.js"></script>
-<!-- /SLCKER -->
 
-<!-- JavaScript -->
-<script src="js/javascript.js" type="javascript/text"></script>
-<!-- JavaScript -->
 
 </body>
 

@@ -260,3 +260,28 @@ FOOTER
 .new--post_form{
 	text-decoration: none;
 }
+.news-content{
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	-webkit-line-clamp:5;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.change-button{
+	display: inline-block;
+}
+.news-buttons{
+	display: inline-block;
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.card-slider img {
+
+}
+.search--widget{
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+}
