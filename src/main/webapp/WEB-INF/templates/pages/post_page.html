@@ -1,113 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <!-- jQuery -->             
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>     
-  <!-- /jQuery -->             
-  <!-- BOOTSTRAP -->             
-  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-grid.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- BOOTSTRAP -->        
-  <script type="text/javascript" src="../js/javascript.js"></script>    
-  <!-- SLCKER -->
-  <link rel="stylesheet" type="text/css" href="../libs/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="../libs/slick/slick-theme.css"/>
-  <script type="text/javascript" src="../libs/slick/slick.min.js"></script>
-  <!-- /SLCKER -->
-  <!-- Mine -->             
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/styles.css">
-  <!-- /Mine -->      
-
+  <title>Post title</title>
+    <div th:replace="parts/header :: header-css"></div>
 </head>
 <body>
-  <div class="header--pane">
-    <div class="container">
-      <!-- NAVIGATION BEGIN -->
-      <nav class="nav-wrapper">           
-        <div class="container--s2">
-          <div class="header--row">
-           <div class="row">
-            <div class="col-md-1">                                
-              <a href="#" ><img src="../img/logo.png" class="logo" alt=""></a>
-            </div>
-            <div class="col-md-10">
-              <!-- navigation begin -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <!-- DROPDOWN BEGIN -->
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Новости</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="submenu--link">Категория 1</a></li>
-                      <li><a href="#" class="submenu--link">Категория 2</a></li>
-                      <li><a href="#" class="submenu--link">Категория 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">ФСКО</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="submenu--link">Документы</a></li>
-                      <li><a href="#" class="submenu--link">Структура</a></li>
-                      <li><a href="#" class="submenu--link">Программа развития 2018-2022</a></li>
-                      <li><a href="#" class="submenu--link">Инфраструктура</a></li>
-
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Календарь соревнований</a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Турниры</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="submenu--link">Мини-футбол/Футзал</a></li>
-                      <li><a href="#" class="submenu--link">Детско-юношеский Футбол</a></li>
-                      <li><a href="#" class="submenu--link">Женский Футбол</a></li>
-                      <li><a href="#" class="submenu--link">Мини-футбол/Футзал среди лиц с ограниченными возможностями</a></li>
-                      <li><a href="#" class="submenu--link">Любительские турниры</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Обучение</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="submenu--link">Урок Футбола</a></li>
-                      <li><a href="#" class="submenu--link">Тренерские курсы</a></li>
-                      <li><a href="#" class="submenu--link">Частные школы футбола</a></li>
-                      <li><a href="#" class="submenu--link">ДЮСШ</a></li>
-                      <li><a href="#" class="submenu--link">Школа молодого арбитра</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Контакты</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#" class="submenu--link">First</a></li>
-                      <li><a href="#" class="submenu--link">Second</a></li>
-                      <li><a href="#" class="submenu--link">Third</a></li>
-                    </ul>
-                  </li>      
-                  <li class="dropdown">
-                    <a href="#" class="navigation__link" data-toggle="dropdown">Галерея</a>
-                  </li>
-                  <li>
-                    <a href="pages/about.html" class="navigation__link">О сайте</a>
-                  </li>
-                  <!-- DROPDOWN END -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- NAVIGATION END -->
-  </div>
-</div>
+<!--header part-->
+<div th:replace="parts/header :: header"></div>
+<!--/header-part-->
 <!-- CONTENT BEGIN -->
 <div class="content--news--back">
   <div class="container">
@@ -126,42 +27,39 @@
                 <!-- Author -->
                 <p class="lead">
                   by
-                  <a href="#">Start Bootstrap</a>
+                  <a href="#">ADMIN NAME</a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p>Posted on January 1, 2019 at 12:00 PM</p>
+                <p>Posted on [DATE]</p>
 
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-fluid rounded" src="http://placehold.it/600x400" alt="">
+                <img class="img-fluid rounded" src="https://s.ill.in.ua/i/news/630x373/326/326439.jpg" alt="">
 
                 <hr>
                 <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recusandae laborum minus inventore?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recus
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recusandae laborum minus inventore?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recusandae laborum minus inventore?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recusandae laborum minus inventore?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                  nam quia corporis eligendi eos magni recusandae laborum minus inventore?
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                  Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi 
-                nam quia corporis eligendi eos magni recusandae laborum minus inventore?andae laborum minus inventore?</p>
+                <p class="content--post--text">Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                    Какой то текст больше текста проверка тест
+                </p>
 
                 <hr>
                 <!-- uSocial -->
@@ -170,39 +68,9 @@
                 <!-- /uSocial -->
               </div>
               <!-- Sidebar Widgets Column -->
-              <div class="col-md-3">
-
-              
-                <div class="row">
-                  <div class="search--widget">
-                   <!-- Search Widget -->
-                   <div class="card my-4">
-                    <h5 class="card-header">Поиск</h5>
-                    <div class="card-body">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Введите слово...">
-                        <span class="input-group-btn">
-                          <button class="btn btn-secondary" type="button">Искать!</button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-md-3">
+                    <div th:replace="parts/widgets :: widget"></div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <h5 class="card-header">Мини-галерея</h5>
-                    <div class="card-slider">
-                      <div class="slider--img"><img src="https://pp.userapi.com/c849336/v849336340/171ec8/Nq7dTZOH1f8.jpg"></div>
-                      <div class="slider--img"><img src="https://pp.userapi.com/c845521/v845521406/166795/FOH8T19qY_0.jpg"></div>
-                      <div class="slider--img"><img src="https://pp.userapi.com/c639526/v639526369/14bd9/PR7raKuoiVI.jpg"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-          </div>
         </div>
       </div>
     </div>
@@ -215,9 +83,9 @@
 <!-- CONTENT END -->
 
 </div> 
-<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="../../../libs/slick/slick.min.js"></script>
 </body>
 </html>

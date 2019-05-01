@@ -278,10 +278,28 @@ FOOTER
 	margin-bottom: 10px;
 }
 .card-slider img {
-
+	height: 313px;
 }
+
 .search--widget{
     padding-left: 15px;
     padding-bottom: 5px;
     padding-right: 15px;
+}
+.content--post--text{
+	font-size: 17px;
+	font-family: 'Lora', serif;
+}
+.content--post img {
+	width: 278px;
+	height: 213px;
+}
+.without-bot-margin{
+	margin-bottom: 5px;
+}
+.slider--widget{
+	padding-bottom: 5px;
+}
+.cal--tour{
+	zoom: 0.91;
 }
