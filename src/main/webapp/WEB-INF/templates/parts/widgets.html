@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Widgets</title>
+</head>
+<body>
+<div th:fragment="widget">
+
+        <div class="row">
+            <div class="search--widget">
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Поиск</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Введите слово...">
+                            <span class="input-group-btn">
+                          <button class="btn btn-secondary" type="button">Искать!</button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider--widget">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <h5 class="card-header">Мини-галерея</h5>
+                        <div class="card-slider">
+                            <div class="slider--img"><img src="https://pp.userapi.com/c849336/v849336340/171ec8/Nq7dTZOH1f8.jpg"></div>
+                            <div class="slider--img"><img src="https://pp.userapi.com/c845521/v845521406/166795/FOH8T19qY_0.jpg"></div>
+                            <div class="slider--img"><img src="https://pp.userapi.com/c639526/v639526369/14bd9/PR7raKuoiVI.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget--news">
+            <script src='https://static.zakon.kz/zakon_cache/widgets/v1/kaz.utf8.js' charset='utf-8'></script><style>.zakon_informer_vert{overflow-y:scroll;overflow-x:hidden;height:280px;width:255px;clear:both;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding:10px;border:1px solid #e9edf1;background:#fff}.zakon_informer_vert .header_zakon{position:relative;font-family:arial;font-weight:700;text-align:left;padding:0 0 3px;border-bottom:1px solid #e3e8ed;font-size:16px;color:#333;margin:0 0 10px}.zakon_informer_vert .header_zakon:before{content:'';width:100px;height:1px;position:absolute;left:0;bottom:-1px;background-color:#009933}.zakon_informer_vert .header_zakon span{letter-spacing:-1px}.zakon_informer_vert ul{margin:0;padding:0}.zakon_informer_vert ul li{display:block;line-height:15px;list-style-type:none;margin:0;padding:0;text-align:left}.zakon_informer_vert ul li:before{content:' ';display:block;border-radius:2px;background-color:#EFF2F5;border:1px solid #009933;display:block;float:left;height:5px;width:5px;position:relative;top:3px;transition:all .15s linear}.zakon_informer_vert ul li a{font-family:tahoma,arial;font-size:12px;text-decoration:none;margin-bottom:5px;padding-bottom:5px;border-bottom:1px dotted #E4E9EE;display:block;margin-left:15px;color:#333;transition:all .15s linear}.zakon_informer_vert ul li a:hover{text-decoration:underline}.zakon_informer_vert ul li:hover:before{background-color:#009933}.zakon_informer_vert .all_news{font-family:tahoma,arial;font-size:12px;text-align:left;margin-left:15px;margin-bottom:10px}.zakon_informer_vert .all_news a{color:#009933;text-decoration:underline}.zakon_informer_vert .all_news a:hover{color:#333}.zakon_informer_vert::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px #E4E9EE;background-color:#eff2f5}.zakon_informer_vert::-webkit-scrollbar{width:3px;background-color:#eff2f5;margin-left:5px}.zakon_informer_vert::-webkit-scrollbar-thumb{background-color:#009933}</style><script>(function(w, rubric, limit) {		var data = w[rubric]; if (!data || !data.length) { return;} var status = w['z_status']; var msg = w['z_msg'];		function formatDate(ts) {var d = new Date(ts * 1000);return d.getHours() + ':' + ('0' + d.getMinutes()).substr(-2);}		if(data.length < limit) { limit = data.length;}var html = "";html += "<div class=zakon_informer_vert><div class=header_zakon><span>НОВОСТИ</span></div><ul>";for (var i = 0; i < limit; i++) { html += '<li><a target="_blank" href="'+ data[i].link +'&utm_source='+encodeURI(location.hostname)+'">'+ data[i].title +'</a></li>';}html += '<div class="all_news"><a target="_blank" href="https://www.zakon.kz/">Все новости на zakon.kz</a></div></ul></div>';if(status != 1) {console.log('zInformer error:'+msg+status);}		document.write(html);	}(window, 'z_news_kaz', 5));</script>
+        </div>
+    </div>
+
+</body>
+</html>

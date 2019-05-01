@@ -28,7 +28,7 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="news-title">
-                                                    <h5 th:text="${post.title}"></h5>
+                                                    <h4 class="without-bot-margin" th:text="${post.title}"></h4>
                                                 </div>
                                                 <div class="news-cats">
                                                     <ul class="list-unstyled list-inline mb-1">
@@ -80,37 +80,9 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="row">
-                        <div class="search--widget">
-                            <!-- Search Widget -->
-                            <div class="card my-4">
-                                <h5 class="card-header">Поиск</h5>
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Введите слово...">
-                                        <span class="input-group-btn">
-                          <button class="btn btn-secondary" type="button">Искать!</button>
-                    </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <h5 class="card-header">Мини-галерея</h5>
-                                <div class="card-slider">
-                                    <div class="slider--img"><img src="https://pp.userapi.com/c849336/v849336340/171ec8/Nq7dTZOH1f8.jpg"></div>
-                                    <div class="slider--img"><img src="https://pp.userapi.com/c845521/v845521406/166795/FOH8T19qY_0.jpg"></div>
-                                    <div class="slider--img"><img src="https://pp.userapi.com/c639526/v639526369/14bd9/PR7raKuoiVI.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div th:replace="parts/widgets :: widget"></div>
                 </div>
-            </div>
+                </div>
         </div>
 
     </div>
