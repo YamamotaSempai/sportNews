@@ -303,3 +303,6 @@ FOOTER
 .cal--tour{
 	zoom: 0.91;
 }
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
