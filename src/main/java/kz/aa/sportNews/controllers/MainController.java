@@ -4,34 +4,51 @@ import kz.aa.sportNews.model.Post;
 import kz.aa.sportNews.service.PostService;
 import kz.aa.sportNews.util.UtilControllers;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Controller
 public class MainController {
 
     private final PostService postService;
     private final UtilControllers utilControllers;
+    private final ApplicationContext applicationContext;
+
+    private final String uploadPath;
 
     @Autowired
-    public MainController(PostService postService, UtilControllers utilControllers) {
+    public MainController(PostService postService, UtilControllers utilControllers, ApplicationContext applicationContext) throws IOException {
         this.postService = postService;
         this.utilControllers = utilControllers;
+        this.applicationContext = applicationContext;
+
+        Resource resource = this.applicationContext.getResource("pdf");
+        uploadPath = resource.getFile().getAbsolutePath();
     }
 
     @RequestMapping("pages/post_page")
-    public String postPAge(Model model,
+    public String postPage(Model model,
                            @RequestParam(value = "id", required = true) Long id) {
 
+        Post post = postService.findById(id);
+
+        model.addAttribute("post", post);
 
         return "pages/post_page.html";
     }
+
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
     public String mainForAdmin(Model model,
                                @RequestParam(value = "page", defaultValue = "1") int page) {
@@ -54,6 +71,25 @@ public class MainController {
     @GetMapping(value = "pages/documents")
     public String documentsPage() {
         return "pages/documents.html";
+    }
+
+    @RequestMapping("/pdf/{fileName:.+}")
+    public void downloadPDFResource(HttpServletResponse response,
+                                    @PathVariable("fileName") String fileName) {
+        //If user is not authorized - he should be thrown out from here itself
+
+        //Authorized user will download the file
+        Path file = Paths.get(uploadPath, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("application/pdf");
+            response.addHeader("Content-Disposition", "attachment; filename=" + fileName);
+            try {
+                Files.copy(file, response.getOutputStream());
+                response.getOutputStream().flush();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     @GetMapping(value = "pages/structure")

@@ -20,4 +20,9 @@ public class PostServiceImpl extends BaseServiceImpl<Post, Long> implements Post
     public Page<Post> findAll(Pageable pageable) {
         return repository.findAll(pageable);
     }
+
+    @Override
+    public void deletePost(Long id) {
+        repository.delete(id);
+    }
 }
