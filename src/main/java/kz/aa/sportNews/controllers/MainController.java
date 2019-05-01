@@ -25,6 +25,13 @@ public class MainController {
         this.utilControllers = utilControllers;
     }
 
+    @RequestMapping("pages/post_page")
+    public String postPAge(Model model,
+                           @RequestParam(value = "id", required = true) Long id) {
+
+
+        return "pages/post_page.html";
+    }
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
     public String mainForAdmin(Model model,
                                @RequestParam(value = "page", defaultValue = "1") int page) {
@@ -86,7 +93,7 @@ public class MainController {
 
     @GetMapping(value = "/pages/mini_football_sredi-lic-ogr-vozmozh")
     public String miniFootballAmongPersonsWithDisabilitiesPage() {
-        return "/pages/mini_football_sredi-lic-ogr-vozmozh.html.html";
+        return "/pages/mini_football_sredi-lic-ogr-vozmozh.html";
     }
 
     @GetMapping(value = "/pages/amateur_tournaments")
@@ -96,7 +103,7 @@ public class MainController {
 
     @GetMapping(value = "pages/calendar")
     public String calendarPage() {
-        return "/pages/calendar.html.html";
+        return "/pages/calendar.html";
     }
 
     @GetMapping(value = "pages/urok_football")
@@ -126,7 +133,7 @@ public class MainController {
 
     @GetMapping(value = "pages/vistavka")
     public String exhibitionPage() {
-        return "/pages/vistavka.html.html";
+        return "/pages/vistavka.html";
     }
 
     @GetMapping(value = "pages/lesson")

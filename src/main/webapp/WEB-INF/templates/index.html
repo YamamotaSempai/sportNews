@@ -24,11 +24,11 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <!--<img th:src="@{'/img_src/' + ${post.urlImg.get(0)}}">-->
+                                                <img th:src="@{'/img_src/' + *{post.urlImg}}">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="news-title">
-                                                    <a th:href="@{|/admin/page?id=*{post.id}|}"><h5 th:text="${post.title}"></h5></a>
+                                                    <h5 th:text="${post.title}"></h5>
                                                 </div>
                                                 <div class="news-cats">
                                                     <ul class="list-unstyled list-inline mb-1">
@@ -52,8 +52,9 @@
                                                    </div>
                                                 </div>
                                                 <div class="news-buttons">
-                                                    <button type="button" class="btn btn-outline-danger btn-sm">Читать
-                                                    </button>
+                                                    <a th:href="@{|/pages/post_page?id=*{post.id}|}">
+                                                        <button type="button" class="btn btn-outline-danger btn-sm">Читать</button>
+                                                    </a>
                                                 </div>
                                                 <div class="change-button">
                                                     <a th:href="@{|/admin/page?id=*{post.id}|}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">Изменить</a>

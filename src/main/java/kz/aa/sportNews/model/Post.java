@@ -27,8 +27,8 @@ public class Post {
     @Column
     private Date date;
 
-    @ElementCollection
-    private List<String> urlImg;
+    @Column(name = "url_img")
+    private String urlImg;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

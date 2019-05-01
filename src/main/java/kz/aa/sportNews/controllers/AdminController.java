@@ -64,7 +64,7 @@ public class AdminController {
             model.addAttribute("post", post);
             return "admin/page";
         } else {
-            post.setUrlImg(new ArrayList<>(Collections.singleton(utilImage.saveFile(file, uploadPath))));
+            post.setUrlImg(utilImage.saveFile(file, uploadPath));
             post.setUser(userService.findCurrentUser().get());
             postService.saveOrUpdate(post);
             return "redirect:/admin/page";
