@@ -21,56 +21,43 @@
             <div class="post--content">
               <div class="col-lg-9">
 
+                  <form th:object="${post}" method="get">
                 <!-- Title -->
-                <h1 class="mt-4">Post Title</h1>
+                      <h1 class="mt-4" th:text="${post.title}"></h1>
 
-                <!-- Author -->
-                <p class="lead">
-                  by
-                  <a href="#">ADMIN NAME</a>
-                </p>
+                      <!-- Author -->
+                      <p class="lead">
+                          <a th:text="${post.user.name + ' ' + post.user.lastName}"></a>
+                      </p>
 
-                <hr>
+                      <hr>
 
-                <!-- Date/Time -->
-                <p>Posted on [DATE]</p>
+                      <!-- Date/Time -->
+                      <p th:text="${#dates.format(post.date, 'dd-MM-yyyy')}"></p>
 
-                <hr>
+                      <hr>
 
-                <!-- Preview Image -->
-                <img class="img-fluid rounded" src="https://s.ill.in.ua/i/news/630x373/326/326439.jpg" alt="">
+                      <!-- Preview Image -->
+                      <img th:src="@{'/img_src/' + *{urlImg}}">
 
-                <hr>
-                <!-- Post Content -->
-                <p class="content--post--text">Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
+                      <hr>
+                      <!-- Post Content -->
+                      <p class="content--post--text" th:text="${post.content}"></p>
 
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                    Какой то текст больше текста проверка тест
-                </p>
-
-                <hr>
-                <!-- uSocial -->
-                <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
-                <div class="uSocial-Share" data-pid="9d533f97ce922111a27ea408313c1c40" data-type="share" data-options="round,style1,default,absolute,horizontal,size48,counter0" data-social="vk,ok,mail,fb,print,email" data-mobile="vi,wa,sms"></div>
-                <!-- /uSocial -->
+                      <hr>
+                      <!-- uSocial -->
+                      <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial"
+                              charset="utf-8"></script>
+                      <div class="uSocial-Share" data-pid="9d533f97ce922111a27ea408313c1c40" data-type="share"
+                           data-options="round,style1,default,absolute,horizontal,size48,counter0"
+                           data-social="vk,ok,mail,fb,print,email" data-mobile="vi,wa,sms"></div>
+                      <!-- /uSocial -->
               </div>
-              <!-- Sidebar Widgets Column -->
+                <!-- Sidebar Widgets Column -->
                 <div class="col-md-3">
                     <div th:replace="parts/widgets :: widget"></div>
                 </div>
+                </form>
         </div>
       </div>
     </div>
