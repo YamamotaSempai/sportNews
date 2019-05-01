@@ -1,15 +1,15 @@
 package kz.aa.sportNews.controllers;
 
+import kz.aa.sportNews.model.Role;
 import kz.aa.sportNews.model.User;
 import kz.aa.sportNews.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -28,36 +28,36 @@ public class AuthorizationController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public ModelAndView registration() {
-        ModelAndView modelAndView = new ModelAndView();
-        User user = new User();
-        modelAndView.addObject("user", user);
-        modelAndView.setViewName("registration");
-        return modelAndView;
-    }
+    public String createNewUser(@RequestParam("name") String name,
+                                      @RequestParam("lastName") String lastName,
+                                      @RequestParam("login") String login,
+                                      @RequestParam("password") String password,
+                                @RequestParam("key") String key,
+                                Model model) {
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
-        ModelAndView modelAndView = new ModelAndView();
-        Optional<User> userExists = userService.findUserByLogin(user.getLogin());
+        Optional<User> userExists = userService.findUserByLogin(login);
+
         if (userExists.isPresent()) {
-            bindingResult
-                    .rejectValue("login", "error.user",
-                            "Пользователь с таким именем уже существует");
+            model.addAttribute("response", "Уже существует пользователь с таким логином");
+            return "/registration.html";
         }
 
-        if (bindingResult.hasErrors()) {
-            modelAndView.setViewName("registration");
-        } else {
+        if (key.equals("newsecretpassw0rd")) {
+            User user = new User();
+            user.setLogin(login);
+            user.setName(name);
+            user.setPassword(password);
+            user.setLastName(lastName);
             user.setIsActive(true);
+            user.setRole(Role.ADMIN);
+
             userService.saveUser(user);
-            modelAndView.addObject("successMessage", "Регистрация прошла успешно, сейчас вы будете перенаправлены");
-            modelAndView.addObject("user", new User());
+            model.addAttribute("response", "Регистрация прошла успешно");
+            return "/registration.html";
+        } else {
 
-
-            modelAndView.setViewName("redirect:/login");
+            model.addAttribute("response", "Ошибка");
+            return "/registration.html";
         }
-
-        return modelAndView;
     }
 }
