@@ -7,4 +7,5 @@ import org.springframework.data.domain.Pageable;
 
 public interface PostService extends BaseService<Post, Long> {
     Page<Post> findAll(Pageable pageable);
+    void deletePost(Long id);
 }
