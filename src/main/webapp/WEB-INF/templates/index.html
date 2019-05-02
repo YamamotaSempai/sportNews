@@ -59,7 +59,7 @@
                                                 </div>
                                                 <div class="change-button">
                                                     <a th:href="@{|/admin/page?id=*{post.id}|}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">Изменить</a>
-                                                    <input class="navigation__link" data-th-attr="id=${post.id}" id="card__button-btn" sec:authorize="hasAuthority('ADMIN')" value="Удалить" type="button">
+                                                    <input class="navigation__link" data-th-attr="post_id=${post.id}" id="card__button-btn" sec:authorize="hasAuthority('ADMIN')" value="Удалить" type="button">
                                                 </div>
                                             </div>
                                         </div>
