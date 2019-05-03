@@ -4,27 +4,24 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java" description="PostService" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ef9a526-8c1a-46f9-ab7d-4dc9c437f96b" name="Default Changelist" comment="Fix edit post &amp; post page &amp; added documents &amp; error filed of login page">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/action_post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/8.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство каз.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство о гос. регестрации каз.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство о гос. регетсрации.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство рус.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Устав каз.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pdf/Устав.pdf" afterDir="false" />
+    <list default="true" id="2ef9a526-8c1a-46f9-ab7d-4dc9c437f96b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/impl/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/impl/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/post_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/post_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure_progress-fb-inKZ.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure_progress-fb-inKZ.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/documents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/documents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/svidet_kaz.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/svidet_kaz.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/svidet_o_gos_registr.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/svidet_o_gos_registr.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/svidet_o_gos_registr_kaz.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/svidet_o_gos_registr_kaz.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/svidet_o_registraci_na_gos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/svidet_o_registraci_na_gos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/svidet_rus.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/svidet_rus.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/ustav.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/ustav.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/docx/ustav_kaz.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pdf/ustav_kaz.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство каз.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство о гос. регестрации каз.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство о гос. регетсрации.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Свидетельство рус.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Устав каз.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pdf/Устав.pdf" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="47" column="58" selection-start-line="44" selection-start-column="8" selection-end-line="47" selection-end-column="58" />
+            <state relative-caret-position="935">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,79 +49,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="61" column="133" selection-start-line="61" selection-start-column="117" selection-end-line="61" selection-end-column="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/action_post.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure_progress-fb-inKZ.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/configs/WebMvcConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="88" column="74" selection-start-line="88" selection-start-column="74" selection-end-line="88" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/util/UtilControllers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="31">
+              <caret line="3" column="65" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -185,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/jsf/AdminController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/model/Post.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/handlers/AccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/handlers/MyAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/handlers/CustomAccessDeniedHandler.java" />
@@ -202,15 +138,16 @@
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/impl/PostServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/page.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/action_post.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure_progress-fb-inKZ.html" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/configs/WebMvcConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/util/UtilControllers.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html" />
         <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/action_post.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -254,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -479,10 +415,16 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SportNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SportNews" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -494,7 +436,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556726555783" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556817057127" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -503,14 +445,15 @@
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.startup.StartupConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\SportNews\src\main\webapp\WEB-INF\templates" />
-      <recent name="E:\SportNews\src\main\webapp\templates" />
-      <recent name="E:\SportNews\src\main\java" />
-      <recent name="E:\SportNews\src\main\kz.aa.sportNews" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="kz.aa.sportNews" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SportNews\src\main\webapp\pdf" />
+      <recent name="E:\SportNews\src\main\webapp\js" />
+      <recent name="E:\SportNews\src\main\java\kz\aa\sportNews\service\base" />
+      <recent name="E:\SportNews\src\main\java\kz\aa\sportNews" />
+      <recent name="E:\SportNews\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="kz.aa.sportNews.util" />
@@ -519,12 +462,12 @@
       <recent name="kz.aa.sportNews.service" />
       <recent name="kz.aa.sportNews.handler" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\SportNews\src\main\webapp\pdf" />
-      <recent name="E:\SportNews\src\main\webapp\js" />
-      <recent name="E:\SportNews\src\main\java\kz\aa\sportNews\service\base" />
-      <recent name="E:\SportNews\src\main\java\kz\aa\sportNews" />
-      <recent name="E:\SportNews\src\main\webapp\WEB-INF" />
+      <recent name="E:\SportNews\src\main\webapp\WEB-INF\templates" />
+      <recent name="E:\SportNews\src\main\webapp\templates" />
+      <recent name="E:\SportNews\src\main\java" />
+      <recent name="E:\SportNews\src\main\kz.aa.sportNews" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -583,7 +526,12 @@
       <workItem from="1556422470399" duration="8237000" />
       <workItem from="1556433117376" duration="2935000" />
       <workItem from="1556436154220" duration="7000" />
-      <workItem from="1556713139652" duration="9731000" />
+      <workItem from="1556713139652" duration="9793000" />
+      <workItem from="1556758296476" duration="50000" />
+      <workItem from="1556758402822" duration="1903000" />
+      <workItem from="1556801425876" duration="24000" />
+      <workItem from="1556809582860" duration="3986000" />
+      <workItem from="1556845531478" duration="888000" />
     </task>
     <task id="LOCAL-00001" summary="Added models for posts">
       <created>1555833656915</created>
@@ -655,11 +603,32 @@
       <option name="project" value="LOCAL" />
       <updated>1556726474053</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fix edit post &amp; post page &amp; added documents &amp; error filed of login page">
+      <created>1556726733156</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556726733156</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added delete by post id">
+      <created>1556726752406</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556726752406</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added function for delete post">
+      <created>1556760161502</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556760161502</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55167000" />
+    <option name="totallyTimeSpent" value="62080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -672,9 +641,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29957357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -691,7 +659,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Problems" order="11" weight="0.32936078" />
@@ -699,8 +667,8 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32936078" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.32936078" />
-      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="17" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="17" weight="0.32936078" />
       <window_info anchor="right" id="JSF" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -781,7 +749,9 @@
     <MESSAGE value="Added registration function" />
     <MESSAGE value="Fix pdf documents" />
     <MESSAGE value="Fix edit post &amp; post page &amp; added documents &amp; error filed of login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix edit post &amp; post page &amp; added documents &amp; error filed of login page" />
+    <MESSAGE value="Added delete by post id" />
+    <MESSAGE value="Added function for delete post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added function for delete post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,13 +768,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/amateur_tournaments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357" />
@@ -877,32 +840,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/img_src/bfd0c410-dfa9-44e8-b976-f7a633cf67e6.userphoto.png" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/img_src/6930d9ec-5073-4cbe-a5b2-fe0e4de23f4d.userphoto.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/model/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/model/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -918,15 +857,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/exception/ExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/exception/ExceptionHandler.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/http/HttpStatus.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1261">
@@ -965,23 +896,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="4" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/exception/ExceptionHandlingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="147" selection-start-line="13" selection-start-column="147" selection-end-line="13" selection-end-column="147" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/exception/ExceptionHandlingController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AuthorizationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -1006,44 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/impl/PostServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/util/ValidationResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,6 +943,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure_progress-fb-inKZ.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1070,7 +969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/configs/WebMvcConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
+        <state relative-caret-position="1156">
           <caret line="88" column="74" selection-start-line="88" selection-start-column="74" selection-end-line="88" selection-end-column="74" />
         </state>
       </provider>
@@ -1082,34 +981,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/about.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="58" selection-start-line="44" selection-start-column="8" selection-end-line="47" selection-end-column="58" />
+        <state relative-caret-position="374">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/documents.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="527" column="7" lean-forward="true" selection-start-line="527" selection-start-column="7" selection-end-line="527" selection-end-column="7" />
+        <state relative-caret-position="1107">
+          <caret line="156" column="7" lean-forward="true" selection-start-line="156" selection-start-column="7" selection-end-line="156" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/action_post.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/PostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/service/impl/PostServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+        <state relative-caret-position="425">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/repository/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1118,25 +1037,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="61" column="133" selection-start-line="61" selection-start-column="117" selection-end-line="61" selection-end-column="133" />
+        <state relative-caret-position="370">
+          <caret line="61" column="105" selection-start-line="61" selection-start-column="105" selection-end-line="61" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/pages/structure.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/action_post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/model/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="435">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kz/aa/sportNews/controllers/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="65" />
         </state>
       </provider>
     </entry>
