@@ -76,10 +76,7 @@ NAViGATION
 	text-decoration: none;
 }
 .content--post{
-
 	padding-bottom: 10px;
-
-
 }
 .content--post img{
 }
@@ -268,6 +265,9 @@ FOOTER
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.news-content p{
+	margin: 0;
+}
 .change-button{
 	display: inline-block;
 }
@@ -293,6 +293,8 @@ FOOTER
 .content--post img {
 	width: 278px;
 	height: 213px;
+	margin: 0;
+	padding: 0;
 }
 .without-bot-margin{
 	margin-bottom: 5px;

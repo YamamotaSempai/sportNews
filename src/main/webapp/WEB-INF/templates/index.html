@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ФСКО</title>
     <div th:replace="parts/header :: header-css"></div>
-    <script type="text/javascript" th:src="@{js/action_post.js}" sec:authorize="hasAuthority('ADMIN')"></script>
+<script type="text/javascript" th:src="@{js/action_post.js}" sec:authorize="hasAuthority('ADMIN')"></script>
 </head>
 <body>
 
@@ -47,11 +47,11 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="news-content">
-                                                   <div class="test">
+
+                                                   <div class="news-content">
                                                        <p th:text="${post.content}"></p>
                                                    </div>
-                                                </div>
+
                                                 <div class="news-buttons">
                                                     <a th:href="@{|/pages/post_page?id=*{post.id}|}">
                                                         <button type="button" class="btn btn-outline-danger btn-sm">Читать</button>
