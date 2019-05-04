@@ -1,285 +1,296 @@
-            <!DOCTYPE html>
-            <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-            <head>
-              <meta charset="UTF-8">
-              <title>ФСКО</title>
-              <div th:replace="parts/header :: header-css"></div>
-            </head>
-            <body>
-            <!--header part-->
-            <div th:replace="parts/header :: header"></div>
-            <!--/header-part-->
-            <!-- CONTENT BEGIN -->
-            <div class="content--news--back">
-              <div class="container">
-                <div class="content--news">
-                  <div class="row">
-           <!-- Start Shopping-Cart -->
-  <div class="shopping-cart">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="cart-title">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ФСКО</title>
+    <div th:replace="parts/header :: header-css"></div>
+</head>
+<body>
+<!--header part-->
+<div th:replace="parts/header :: header"></div>
+<!--/header-part-->
+<!-- CONTENT BEGIN -->
+<div class="content--news--back">
+    <div class="container">
+        <div class="content--news">
+            <div class="row">
+                <!-- Start Shopping-Cart -->
+                <div class="shopping-cart">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="cart-title">
 
-        </div>
-        <!-- Start Table -->
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <td class="text-center">№</td> <!-- Картинка имя категория -->
-                <td class="text-center">Название</td>
-                <td class="text-center">Фото</td>
-                <td class="text-center photo">Контакты</td>
-                <td class="text-center">Описание</td>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">1</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ЦЕНТРАЛЬНЫЙ»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/central.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">г.Костанай, ул 1Мая 153.</li>
-                  <li class="without--dot">Рабочий телефон: 578680</li>
-                  <li class="without--dot">Приемная: 579455</li>
-                </td>
-                <td class="text-center" id="">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Натуральное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">2</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>МАНЕЖ «ТОБЫЛ АРЕНА»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/tobil-arena.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Г.Костанай  микрорайон Береке уч.142</li>
-                  <li class="without--dot">Приемная: 579455</li>
-                </td>
-                <td class="text-center" id="">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Натуральное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">3</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ЖАСТАР»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/zhastar.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">ул. Пролетарская 127</li>
-                  <li class="without--dot">Рабочий телефон: 53 44 22</li>
-                  
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7500 м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">4</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ЗАТОБОЛЕЦ»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/zatobolec.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Костанайский район  ПГТ. </li>
-                  <li class="without--dot">Зaтoбoльcк  ул. Терешкова 26/1</li>
-                  <li class="without--dot">Рабочий телефон:  87145520079</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Размер 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">5</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ГОРНЯК»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/gornyak.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Г. Рудный ул. Ленина 56</li>
-                  <li class="without--dot">Телефон 87143190878  </li>
-                  <li class="without--dot">87143193564</li>
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">6</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>ЛИСАКОВСКИЙ ГОРОДСКОЙ СТАДИОН</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/lys-gor-stadium.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">г. Лисаковск ул. Верхнетобольская 41</li>
-                  <li class="without--dot">Телефон: 87752664497</li>
-                
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">7</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ГОРНЯК»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/gornyak--zhitikara.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Костанайская область,</li>
-                  <li class="without--dot">г. Житикара</li>
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">8</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ЖИГЕР»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/zhiger.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">г. Аркалык, ул Горбачева 81</li>
-                
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">9</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>ФЕДОРОВСКИЙ СТАДИОН</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/fedorovsky.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">с. Федоровка ул. Чокана </li>
-                  <li class="without--dot">Уалиханова 9А</li>
-                  <li class="without--dot">Рабочий телефон: 87144221050</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">Размер поля: 7770м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное </li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-              <!-- ROW BEGIN -->
-              <tr>
-                <td class="text-center">
-                  <li class="without--dot">10</li>
-                </td>
-                <td class="text-center">
-                  <li class="without--dot"><label>СТАДИОН «ЖЕНИС»</label></li>
-                </td>
-                <td class="text-center">
-                  <img src="../../../img/stadium/zhenis.jpg" class="img-thumbnail" alt="photo">
-                </td>
-                <td class="text-center">
-                  <li class="without--dot">КАРАСУСКИЙ РАЙОН п. Карасу</li>
-                  <li class="without--dot">Ул. А.Исакова 73</li>
-                </td>
-                <td class="text-center" id="tovarPrice">
-                  <li class="without--dot">Размер поля: 7500м2</li>
-                  <li class="without--dot">Покрытие поля: Искусственное</li>
-                </td>
-              </tr>
-              <!-- ROW END -->
-            </tbody>
-            <!-- SECOND ROW -->
-          </table>
-        </div>
-        <!-- End Table -->
-        <h4 class="text-center">
-          В Костанайской области 30 стадионов, из них 8 с искусственным покрытием в Костанае, Рудном, Лисаковске, Житикаре, Аркалыке, Карасу, Федоровке, Сарыколе.
-        </h4>
-      </div>
-    </div>
-  </div>
-  <!-- End Shopping-Cart -->
-              </div>
+                            </div>
+                            <!-- Start Table -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <td class="text-center">№</td> <!-- Картинка имя категория -->
+                                        <td class="text-center">Название</td>
+                                        <td class="text-center">Фото</td>
+                                        <td class="text-center photo">Контакты</td>
+                                        <td class="text-center">Описание</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">1</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ЦЕНТРАЛЬНЫЙ»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/central.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">г.Костанай, ул 1Мая 153.</li>
+                                            <li class="without--dot">Рабочий телефон: 578680</li>
+                                            <li class="without--dot">Приемная: 579455</li>
+                                        </td>
+                                        <td class="text-center" id="">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Натуральное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">2</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>МАНЕЖ «ТОБЫЛ АРЕНА»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/tobil-arena.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Г.Костанай микрорайон Береке уч.142</li>
+                                            <li class="without--dot">Приемная: 579455</li>
+                                        </td>
+                                        <td class="text-center" id="">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Натуральное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">3</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ЖАСТАР»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/zhastar.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">ул. Пролетарская 127</li>
+                                            <li class="without--dot">Рабочий телефон: 53 44 22</li>
+
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7500 м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">4</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ЗАТОБОЛЕЦ»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/zatobolec.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Костанайский район ПГТ.</li>
+                                            <li class="without--dot">Зaтoбoльcк ул. Терешкова 26/1</li>
+                                            <li class="without--dot">Рабочий телефон: 87145520079</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Размер 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">5</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ГОРНЯК»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/gornyak.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Г. Рудный ул. Ленина 56</li>
+                                            <li class="without--dot">Телефон 87143190878</li>
+                                            <li class="without--dot">87143193564</li>
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">6</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>ЛИСАКОВСКИЙ ГОРОДСКОЙ СТАДИОН</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/lys-gor-stadium.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">г. Лисаковск ул. Верхнетобольская 41</li>
+                                            <li class="without--dot">Телефон: 87752664497</li>
+
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">7</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ГОРНЯК»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/gornyak--zhitikara.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Костанайская область,</li>
+                                            <li class="without--dot">г. Житикара</li>
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">8</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ЖИГЕР»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/zhiger.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">г. Аркалык, ул Горбачева 81</li>
+
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">9</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>ФЕДОРОВСКИЙ СТАДИОН</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/fedorovsky.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">с. Федоровка ул. Чокана</li>
+                                            <li class="without--dot">Уалиханова 9А</li>
+                                            <li class="without--dot">Рабочий телефон: 87144221050</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">Размер поля: 7770м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    <!-- ROW BEGIN -->
+                                    <tr>
+                                        <td class="text-center">
+                                            <li class="without--dot">10</li>
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot"><label>СТАДИОН «ЖЕНИС»</label></li>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="../../../img/stadium/zhenis.jpg" class="img-thumbnail"
+                                                 alt="photo">
+                                        </td>
+                                        <td class="text-center">
+                                            <li class="without--dot">КАРАСУСКИЙ РАЙОН п. Карасу</li>
+                                            <li class="without--dot">Ул. А.Исакова 73</li>
+                                        </td>
+                                        <td class="text-center" id="tovarPrice">
+                                            <li class="without--dot">Размер поля: 7500м2</li>
+                                            <li class="without--dot">Покрытие поля: Искусственное</li>
+                                        </td>
+                                    </tr>
+                                    <!-- ROW END -->
+                                    </tbody>
+                                    <!-- SECOND ROW -->
+                                </table>
+                            </div>
+                            <!-- End Table -->
+                            <h4 class="text-center">
+                                В Костанайской области 30 стадионов, из них 8 с искусственным покрытием в Костанае,
+                                Рудном, Лисаковске, Житикаре, Аркалыке, Карасу, Федоровке, Сарыколе.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Shopping-Cart -->
             </div>
+        </div>
 
-          </div>
-          <!-- CONTENT END -->
+    </div>
+    <!-- CONTENT END -->
 
-        </div> 
+</div>
 
-        <!-- SLCKER -->
-        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
-        <script type="text/javascript" src="libs/slick/slick.min.js"></script>
-        <!-- /SLCKER -->
+<!-- SLCKER -->
+<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+<!-- /SLCKER -->
 
-        <!-- JavaScript -->
-        <script src="js/javascript.js" type="javascript/text"></script>
-        <!-- JavaScript -->
+<!-- JavaScript -->
+<script src="js/javascript.js" type="javascript/text"></script>
+<!-- JavaScript -->
 
-      </body>    
+</body>
 
-      </html>
+</html>

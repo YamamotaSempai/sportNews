@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>Post title</title>
+    <meta charset="UTF-8">
+    <title>Post title</title>
     <div th:replace="parts/header :: header-css"></div>
 </head>
 <body>
@@ -11,65 +11,67 @@
 <!--/header-part-->
 <!-- CONTENT BEGIN -->
 <div class="content--news--back">
-  <div class="container">
-    <div class="content--news">
-      <div class="row">
-       <!-- Start Shopping-Cart -->
-       <div class="shopping-cart">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="post--content">
-              <div class="col-lg-9">
+    <div class="container">
+        <div class="content--news">
+            <div class="row">
+                <!-- Start Shopping-Cart -->
+                <div class="shopping-cart">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post--content">
+                                <div class="col-lg-9">
 
-                  <form th:object="${post}" method="get">
-                <!-- Title -->
-                      <h1 class="mt-4" th:text="${post.title}"></h1>
+                                    <form th:object="${post}" method="get">
+                                        <!-- Title -->
+                                        <h1 class="mt-4" th:text="${post.title}"></h1>
 
-                      <!-- Author -->
-                      <p class="lead">
-                          <a th:text="${post.user.name + ' ' + post.user.lastName}"></a>
-                      </p>
+                                        <!-- Author -->
+                                        <p class="lead">
+                                            <a th:text="${post.user.name + ' ' + post.user.lastName}"></a>
+                                        </p>
 
-                      <hr>
+                                        <hr>
 
-                      <!-- Date/Time -->
-                      <p th:text="${#dates.format(post.date, 'dd-MM-yyyy')}"></p>
+                                        <!-- Date/Time -->
+                                        <p th:text="${#dates.format(post.date, 'dd-MM-yyyy')}"></p>
 
-                      <hr>
+                                        <hr>
 
-                      <!-- Preview Image -->
-                      <img th:src="@{'/img_src/' + *{urlImg}}">
+                                        <!-- Preview Image -->
+                                        <img th:src="@{'/img_src/' + *{urlImg}}">
 
-                      <hr>
-                      <!-- Post Content -->
-                      <p class="content--post--text" th:text="${post.content}"></p>
+                                        <hr>
+                                        <!-- Post Content -->
+                                        <p class="content--post--text" th:text="${post.content}"></p>
 
-                      <hr>
-                      <!-- uSocial -->
-                      <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial"
-                              charset="utf-8"></script>
-                      <div class="uSocial-Share" data-pid="9d533f97ce922111a27ea408313c1c40" data-type="share"
-                           data-options="round,style1,default,absolute,horizontal,size48,counter0"
-                           data-social="vk,ok,mail,fb,print,email" data-mobile="vi,wa,sms"></div>
-                      <!-- /uSocial -->
-              </div>
-                <!-- Sidebar Widgets Column -->
-                <div class="col-md-3">
-                    <div th:replace="parts/widgets :: widget"></div>
+                                        <hr>
+                                        <!-- uSocial -->
+                                        <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4"
+                                                data-script="usocial"
+                                                charset="utf-8"></script>
+                                        <div class="uSocial-Share" data-pid="9d533f97ce922111a27ea408313c1c40"
+                                             data-type="share"
+                                             data-options="round,style1,default,absolute,horizontal,size48,counter0"
+                                             data-social="vk,ok,mail,fb,print,email" data-mobile="vi,wa,sms"></div>
+                                        <!-- /uSocial -->
+                                </div>
+                                <!-- Sidebar Widgets Column -->
+                                <div class="col-md-3">
+                                    <div th:replace="parts/widgets :: widget"></div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </form>
+                <!-- End Shopping-Cart -->
+            </div>
         </div>
-      </div>
+
     </div>
-  </div>
-  <!-- End Shopping-Cart -->
-</div>
-</div>
+    <!-- CONTENT END -->
 
 </div>
-<!-- CONTENT END -->
-
-</div> 
 <script src="../../../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

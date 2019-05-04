@@ -7,8 +7,9 @@
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <!-- /jQuery -->
         <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="../../../libs/bootstrap/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" href="../../../libs/bootstrap/css/bootstrap-grid.css">
+        <link rel="stylesheet" type="text/css" th:href="@{/libs/bootstrap/css/bootstrap-grid.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/libs/bootstrap/css/bootstrap-reboot.min.css}"/>
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
                 crossorigin="anonymous"></script>
@@ -18,16 +19,31 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
               integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
               crossorigin="anonymous">
+
+
         <!-- BOOTSTRAP -->
-        <script type="text/javascript" src="../../../js/javascript.js"></script>
+        <script type="text/javascript" th:src="@{js/javascript.js}"></script>
+        <script type="text/javascript" th:src="@{libs/slick.js}"></script>
+
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main--admin.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main__revard.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+
+
         <!-- SLCKER -->
-        <link rel="stylesheet" type="text/css" href="../../../libs/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="../../../libs/slick/slick-theme.css"/>
-        <script type="text/javascript" src="../../../libs/slick/slick.min.js"></script>
+        <link rel="stylesheet" type="text/css" th:href="@{/libs/slick/slick.css}"/>
+        <link rel="stylesheet" type="text/less" th:href="@{/libs/slick/slick-theme.less}"/>
+        <link rel="stylesheet" type="text/scss" th:href="@{/libs/slick/slick-theme.scss}"/>
+        <link rel="stylesheet" type="text/scss" th:href="@{/libs/slick/slick.scss}"/>
+        <link rel="stylesheet" type="text/less" th:href="@{/libs/slick/slick.less}"/>
+
+
         <!-- /SLCKER -->
+
         <!-- Mine -->
-        <link rel="stylesheet" href="../../../css/main.css">
-        <link rel="stylesheet" href="../../../css/styles.css">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
         <!-- /Mine -->
     </div>
 </head>
@@ -42,7 +58,7 @@
                     <div class="header--row">
                         <div class="row">
                             <div class="col-md-1">
-                                <a th:href="@{/home}"><img src="../../../img/logo.png" class="logo" alt=""></a>
+                                <a th:href="@{/home}"><img th:src="@{/img/logo.png}" class="logo" alt=""></a>
                             </div>
                             <div class="col-md-10">
                                 <!-- navigation begin -->
@@ -108,26 +124,5 @@
 
     </div>
 </div>
-<!--<div th:fragment="header-for-admin-panel">-->
-    <!--<nav class="nav-wrapper">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="logo-head">-->
-                    <!--<div class="col-md-2">-->
-                        <!--<a th:href="@{/home}" class="logo">kazsauda</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="col-md-9">-->
-                    <!--<div class="navigation">-->
-                        <!--<a th:href="@{/admin/page}" class="navigation__link" sec:authorize="hasAuthority('ADMIN')">ADMIN-->
-                            <!--PANEL</a>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-
-            <!--</div>-->
-        <!--</div>-->
-    <!--</nav>-->
-<!--</div>-->
 </body>
 </html>
