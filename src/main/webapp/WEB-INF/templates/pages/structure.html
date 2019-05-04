@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-  <div th:replace="parts/header :: header-css"></div>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <div th:replace="parts/header :: header-css"></div>
 </head>
 <body>
 <!--header part-->
 <div th:replace="parts/header :: header"></div>
 <!--/header-part-->
-            <!-- CONTENT BEGIN -->
-            <div class="content--news--back">
-              <div class="container">
-                <div class="content--news">
-                  <div class="row">
-           <!-- Start Shopping-Cart -->
-  <div class="shopping-cart">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="cart-title">
-               <h1>Структура</h1>
-          <div class="docu--read">
-            <object class="pdf--reader" data="../../../pdf/OUL.pdf" type="application/pdf" width="100%" height="100%">
-                <!--<p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>-->
-</object>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Shopping-Cart -->
-              </div>
+<!-- CONTENT BEGIN -->
+<div class="content--news--back">
+    <div class="container">
+        <div class="content--news">
+            <div class="row">
+                <!-- Start Shopping-Cart -->
+                <div class="shopping-cart">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="cart-title">
+                                <h1>Структура</h1>
+                                <div class="docu--read">
+                                    <object class="pdf--reader" th:data="@{/pdf/OUL.pdf}" type="application/pdf"
+                                            width="100%" height="100%">
+                                        <!--<p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>-->
+                                    </object>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Shopping-Cart -->
             </div>
+        </div>
 
-          </div>
-          <!-- CONTENT END -->
+    </div>
+    <!-- CONTENT END -->
 
-        </div> 
+</div>
 
 </body>
 </html>

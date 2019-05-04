@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ФСКО</title>
     <div th:replace="parts/header :: header-css"></div>
-    <script src="../../js/action_post.js" sec:authorize="hasAuthority('ADMIN')"></script>
+    <script type="text/javascript" th:src="@{js/action_post.js}" sec:authorize="hasAuthority('ADMIN')"></script>
 </head>
 <body>
 
