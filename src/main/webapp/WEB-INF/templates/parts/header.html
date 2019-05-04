@@ -22,8 +22,8 @@
 
 
         <!-- BOOTSTRAP -->
-        <script type="text/javascript" th:src="@{js/javascript.js}"></script>
-        <script type="text/javascript" th:src="@{libs/slick.js}"></script>
+        <script type="text/javascript" th:src="@{/js/javascript.js}"></script>
+        <script type="text/javascript" th:src="@{/libs/slick/slick.js}"></script>
 
         <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
         <link rel="stylesheet" type="text/css" th:href="@{/css/main--admin.css}"/>
@@ -58,7 +58,7 @@
                     <div class="header--row">
                         <div class="row">
                             <div class="col-md-1">
-                                <a th:href="@{/home}"><img th:src="@{/img/logo.png}" class="logo" alt=""></a>
+                                <a th:href="@{/home}"><img alt="" class="logo" th:src="@{/img/logo.png}"/></a>
                             </div>
                             <div class="col-md-10">
                                 <!-- navigation begin -->
