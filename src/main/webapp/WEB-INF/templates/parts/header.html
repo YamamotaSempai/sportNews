@@ -56,59 +56,61 @@
                             <div class="col-md-1">
                                 <a th:href="@{/home}"><img alt="" class="logo" th:src="@{/img/logo.png}"/></a>
                             </div>
-                            <div class="col-md-10">
-                                <!-- navigation begin -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav">
-                                        <!-- DROPDOWN BEGIN -->
-                                        <li class="dropdown">
-                                            <a th:href="@{/home}" class="navigation__link">Новости</a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="navigation__link" data-toggle="dropdown">ФСКО</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a th:href="@{/pages/structure_progress-fb-inKZ}" class="submenu--link">Стратегия развития Казахстанского футбола</a></li>
-                                                <li><a th:href="@{/pages/documents}" class="submenu--link">Документы</a></li>
-                                                <li><a th:href="@{/pages/structure}" class="submenu--link">Структура</a></li>
-                                                <li><a th:href="@{/pages/program_development}" class="submenu--link">Программа развития 2018-2022</a></li>
-                                                <li><a th:href="@{/pages/infra_structure}" class="submenu--link">Инфраструктура</a></li>
-                                                <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="navigation__link" data-toggle="dropdown">Турниры</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a th:href="@{/pages/mini_football_futzal}" class="submenu--link">Мини-футбол/Футзал</a></li>
-                                                <li><a th:href="@{/pages/kids_tournaments}" class="submenu--link">Детско-юношеский Футбол</a></li>
-                                                <li><a th:href="@{/pages/woman_football}" class="submenu--link">Женский Футбол</a></li>
-                                                <li><a th:href="@{/pages/mini_football_sredi-lic-ogr-vozmozh}" class="submenu--link">Мини-футбол/Футзал среди лиц с ограниченными возможностями</a></li>
-                                                <li><a th:href="@{/pages/amateur_tournaments}" class="submenu--link">Любительские турниры</a></li>
-                                                <li><a th:href="@{/pages/calendar}" class="submenu--link">Календарь соревнований</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="navigation__link" data-toggle="dropdown">Обучение</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a th:href="@{/pages/urok_football}" class="submenu--link">Урок Футбола</a></li>
-                                                <li><a th:href="@{/pages/coach_courses}" class="submenu--link">Тренерские курсы</a></li>
-                                                <li><a th:href="@{/pages/private_school}" class="submenu--link">Частные школы футбола</a></li>
-                                                <li><a th:href="@{/pages/dushsa}" class="submenu--link">ДЮСШ</a></li>
-                                                <li><a th:href="@{/pages/young_arbitr}" class="submenu--link">Школа молодого арбитра</a></li>
-                                                <li><a th:href="@{/pages/vistavka}" class="submenu--link">Выставка</a></li>
-                                                <li><a th:href="@{/pages/lesson}" class="submenu--link">Урок футбола в школе</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a th:href="@{/pages/contacts}" class="navigation__link">Контакты</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="navigation__link" data-toggle="dropdown">Галерея</a>
-                                        </li>
-                                        <li>
-                                            <a th:href="@{/pages/about}" class="navigation__link">О сайте</a>
-                                        </li>
-                                        <!-- DROPDOWN END -->
-                                    </ul>
+                            <div class="navig--menu">
+                                <div class="col-md-10">
+                                    <!-- navigation begin -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                            <!-- DROPDOWN BEGIN -->
+                                            <li class="dropdown">
+                                                <a th:href="@{/home}" class="navigation__link">Новости</a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="navigation__link" data-toggle="dropdown">ФСКО</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a th:href="@{/pages/structure_progress-fb-inKZ}" class="submenu--link">Стратегия развития Казахстанского футбола</a></li>
+                                                    <li><a th:href="@{/pages/documents}" class="submenu--link">Документы</a></li>
+                                                    <li><a th:href="@{/pages/structure}" class="submenu--link">Структура</a></li>
+                                                    <li><a th:href="@{/pages/program_development}" class="submenu--link">Программа развития 2018-2022</a></li>
+                                                    <li><a th:href="@{/pages/infra_structure}" class="submenu--link">Инфраструктура</a></li>
+                                                    <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="navigation__link" data-toggle="dropdown">Турниры</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a th:href="@{/pages/mini_football_futzal}" class="submenu--link">Мини-футбол/Футзал</a></li>
+                                                    <li><a th:href="@{/pages/kids_tournaments}" class="submenu--link">Детско-юношеский Футбол</a></li>
+                                                    <li><a th:href="@{/pages/woman_football}" class="submenu--link">Женский Футбол</a></li>
+                                                    <li><a th:href="@{/pages/mini_football_sredi-lic-ogr-vozmozh}" class="submenu--link">Мини-футбол/Футзал среди лиц с ограниченными возможностями</a></li>
+                                                    <li><a th:href="@{/pages/amateur_tournaments}" class="submenu--link">Любительские турниры</a></li>
+                                                    <li><a th:href="@{/pages/calendar}" class="submenu--link">Календарь соревнований</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="navigation__link" data-toggle="dropdown">Обучение</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a th:href="@{/pages/urok_football}" class="submenu--link">Урок Футбола</a></li>
+                                                    <li><a th:href="@{/pages/coach_courses}" class="submenu--link">Тренерские курсы</a></li>
+                                                    <li><a th:href="@{/pages/private_school}" class="submenu--link">Частные школы футбола</a></li>
+                                                    <li><a th:href="@{/pages/dushsa}" class="submenu--link">ДЮСШ</a></li>
+                                                    <li><a th:href="@{/pages/young_arbitr}" class="submenu--link">Школа молодого арбитра</a></li>
+                                                    <li><a th:href="@{/pages/vistavka}" class="submenu--link">Выставка</a></li>
+                                                    <li><a th:href="@{/pages/lesson}" class="submenu--link">Урок футбола в школе</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/pages/contacts}" class="navigation__link">Контакты</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="navigation__link" data-toggle="dropdown">Галерея</a>
+                                            </li>
+                                            <li>
+                                                <a th:href="@{/pages/about}" class="navigation__link">О сайте</a>
+                                            </li>
+                                            <!-- DROPDOWN END -->
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

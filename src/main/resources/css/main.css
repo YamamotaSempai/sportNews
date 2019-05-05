@@ -41,10 +41,11 @@ NAViGATION
 }
 
 .container--s2{
-	margin-top: 15px;
 	margin-left: 15px;
 }
-
+.navig--menu{
+	padding-top: 10px;
+}
 .logo{
 	padding-right: 25px;
 	width: 95px;
