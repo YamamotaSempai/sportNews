@@ -14,10 +14,12 @@
                     <h5 class="card-header">Поиск</h5>
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Введите слово...">
-                            <span class="input-group-btn">
-                          <button class="btn btn-secondary" type="button">Искать!</button>
-                    </span>
+                            <form th:action="@{/search}" th:object="${searchDto}">
+                                <input type="text" class="form-control" th:field="*{searchText}" placeholder="Введите слово...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="submit" >Искать!</button>
+                                </span>
+                            </form>
                         </div>
                     </div>
                 </div>
