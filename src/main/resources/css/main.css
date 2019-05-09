@@ -493,3 +493,10 @@ a.compose-mail {
 a:hover{
     text-decoration:none;
 }
+.td-style{
+	border-bottom:solid 1px #000000; 
+	border-right:solid 1px #000000;
+}
+.dushs--table{
+	text-align: center;
+}

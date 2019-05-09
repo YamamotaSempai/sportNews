@@ -4,8 +4,8 @@
     <div th:fragment="header-css">
         <!--styles-->
         <!-- jQuery -->
-        <!--<script th:src="@{/webjars/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js}"></script>-->
-        <!--<script th:src="@{/webjars/http_code.jquery.com_jquery-2.2.0.js}" type="text/javascript"></script>-->
+        <script th:src="@{/webjars/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js}"></script>
+        <script th:src="@{/webjars/http_code.jquery.com_jquery-2.2.0.js}" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <!-- /jQuery -->
@@ -74,7 +74,7 @@
                                                     <li><a th:href="@{/pages/structure}" class="submenu--link">Структура</a></li>
                                                     <li><a th:href="@{/pages/program_development}" class="submenu--link">Программа развития 2018-2022</a></li>
                                                     <li><a th:href="@{/pages/infra_structure}" class="submenu--link">Инфраструктура</a></li>
-                                                    <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
@@ -97,14 +97,14 @@
                                                     <li><a th:href="@{/pages/dushsa}" class="submenu--link">ДЮСШ</a></li>
                                                     <li><a th:href="@{/pages/young_arbitr}" class="submenu--link">Школа молодого арбитра</a></li>
                                                     <li><a th:href="@{/pages/vistavka}" class="submenu--link">Выставка</a></li>
-                                                    <li><a th:href="@{/pages/lesson}" class="submenu--link">Урок футбола в школе</a></li>
+                                                    <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a th:href="@{/pages/contacts}" class="navigation__link">Контакты</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="navigation__link" data-toggle="dropdown">Галерея</a>
+                                                <a th:href="@{/pages/lesson}" class="navigation__link">Обратная связь</a>
                                             </li>
                                             <li>
                                                 <a th:href="@{/pages/about}" class="navigation__link">О сайте</a>
