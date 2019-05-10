@@ -1,6 +1,7 @@
 package kz.aa.sportNews.configs;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -25,6 +26,9 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 public class WebMvcConfiguration implements WebMvcConfigurer {
 
     private ApplicationContext applicationContext;
+
+    @Value("${upload.path}")
+    private String uploadPath;
 
     public WebMvcConfiguration() {
         super();
@@ -98,7 +102,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
         registry.addResourceHandler("/css/**").addResourceLocations("classpath:/css/");
         registry.addResourceHandler("/js/**").addResourceLocations("classpath:/js/");
         registry.addResourceHandler("/libs/**").addResourceLocations("classpath:/libs/");
-        registry.addResourceHandler("/img_src/**").addResourceLocations("classpath:/img_src/");
+        registry.addResourceHandler("/img_src/**").addResourceLocations("file://" + uploadPath + "/");
         registry.addResourceHandler("/pdf/**").addResourceLocations("classpath:/pdf/");
     }
 }
