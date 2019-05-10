@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.NotEmpty;
+
 @Service
 @Transactional
 public class PostServiceImpl extends BaseServiceImpl<Post, Long> implements PostService {
@@ -24,5 +26,10 @@ public class PostServiceImpl extends BaseServiceImpl<Post, Long> implements Post
     @Override
     public void deletePost(Long id) {
         repository.delete(id);
+    }
+
+    @Override
+    public Page<Post> findByTitleLike(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable) {
+        return repository.findByTitleLike(title, pageable);
     }
 }

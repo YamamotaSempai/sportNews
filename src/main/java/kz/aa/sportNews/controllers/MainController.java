@@ -1,5 +1,6 @@
 package kz.aa.sportNews.controllers;
 
+import kz.aa.sportNews.dto.SearchForm;
 import kz.aa.sportNews.model.Post;
 import kz.aa.sportNews.service.PostService;
 import kz.aa.sportNews.util.UtilControllers;
@@ -50,17 +51,37 @@ public class MainController {
     }
 
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
-    public String mainForAdmin(Model model,
-                               @RequestParam(value = "page", defaultValue = "1") int page) {
+    public String main(Model model,
+                       @RequestParam(value = "page", defaultValue = "1") int page,
+                       @RequestParam(value = "key_word", defaultValue = "", required = false) String keyWord) {
 
         PageRequest pageable = PageRequest.of(page - 1, 12);
-        Page<Post> postOptional = postService.findAll(pageable);
+
+        Page<Post> postOptional;
+        if (keyWord.equalsIgnoreCase("")) {
+            postOptional = postService.findAll(pageable);
+            model.addAttribute("isSearch", false);
+        } else {
+            postOptional = postService.findByTitleLike(keyWord, pageable);
+            model.addAttribute("keyWord", keyWord);
+            model.addAttribute("isSearch", true);
+        }
 
         model.addAttribute("posts", postOptional);
+        model.addAttribute("searchDto", new SearchForm(""));
 
         utilControllers.pageCountNumber(model, postOptional.getTotalPages());
 
         return "index";
+    }
+
+    @RequestMapping(value = "search", method = RequestMethod.GET)
+    public String search(SearchForm searchForm) {
+
+        if (searchForm.getSearchText() != null && !searchForm.getSearchText().equalsIgnoreCase(""))
+            return "redirect:/home?key_word=" + searchForm.getSearchText();
+
+        return "redirect:/home";
     }
 
     @GetMapping(value = "pages/structure_progress-fb-inKZ")
