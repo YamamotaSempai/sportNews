@@ -9,13 +9,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -50,7 +56,7 @@ public class MainController {
         return "pages/post_page.html";
     }
 
-    @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET, produces = MediaType.ALL_VALUE + ";charset=UTF-8")
     public String main(Model model,
                        @RequestParam(value = "page", defaultValue = "1") int page,
                        @RequestParam(value = "key_word", defaultValue = "", required = false) String keyWord) {
@@ -76,12 +82,20 @@ public class MainController {
     }
 
     @RequestMapping(value = "search", method = RequestMethod.GET)
-    public String search(SearchForm searchForm) {
+    public ModelAndView search(SearchForm searchForm) {
 
-        if (searchForm.getSearchText() != null && !searchForm.getSearchText().equalsIgnoreCase(""))
-            return "redirect:/home?key_word=" + searchForm.getSearchText();
+        String encodedId = null;
+        if (searchForm.getSearchText() != null && !searchForm.getSearchText().equalsIgnoreCase("")) {
+            try {
+                encodedId = URLEncoder.encode(searchForm.getSearchText(), "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
-        return "redirect:/home";
+            return new ModelAndView(new RedirectView("/home?key_word=" + encodedId, true, true, false));
+        }
+
+        return new ModelAndView(new RedirectView("/home", true, true, false));
     }
 
     @GetMapping(value = "pages/structure_progress-fb-inKZ")
