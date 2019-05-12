@@ -5,11 +5,15 @@ import kz.aa.sportNews.model.Post;
 import kz.aa.sportNews.service.PostService;
 import kz.aa.sportNews.util.UtilControllers;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -31,7 +36,8 @@ public class MainController {
     private final UtilControllers utilControllers;
     private final ApplicationContext applicationContext;
 
-    private final String uploadPath;
+    @Value(value = "classpath:/pdf")
+    private Resource pathResources;
 
     @Autowired
     public MainController(PostService postService, UtilControllers utilControllers, ApplicationContext applicationContext) throws IOException {
@@ -39,8 +45,8 @@ public class MainController {
         this.utilControllers = utilControllers;
         this.applicationContext = applicationContext;
 
-        Resource resource = this.applicationContext.getResource("pdf");
-        uploadPath = resource.getFile().getAbsolutePath();
+//        Resource resource = this.applicationContext.getResource("pdf");
+//        pathResources = resource.getFile().getAbsolutePath();
     }
 
     @RequestMapping("pages/post_page")
@@ -106,13 +112,11 @@ public class MainController {
         return "pages/documents.html";
     }
 
-    @RequestMapping("/pdf/{fileName:.+}")
+    @RequestMapping(value = "/pdf/{fileName:.+}", method = RequestMethod.GET)
     public void downloadPDFResource(HttpServletResponse response,
-                                    @PathVariable("fileName") String fileName) {
-        //If user is not authorized - he should be thrown out from here itself
+                                    @PathVariable("fileName") String fileName) throws IOException {
 
-        //Authorized user will download the file
-        Path file = Paths.get(uploadPath, fileName);
+        Path file = Paths.get(String.valueOf(pathResources.getFile()), fileName);
         if (Files.exists(file)) {
             response.setContentType("application/pdf");
             response.addHeader("Content-Disposition", "attachment; filename=" + fileName);

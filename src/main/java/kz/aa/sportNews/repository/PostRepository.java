@@ -19,5 +19,8 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     Page<Post> findAllByOrderByDateDesc(Pageable pageable);
 
+    @Query(value = "select * from post where UPPER(title) like upper(concat('%',?1,'%')) order by date DESC",
+            countQuery = "SELECT count(*) FROM post WHERE title like concat('%',?1,'%')",
+            nativeQuery = true)
     Page<Post> findByTitleLikeOrderByDateDesc(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable);
 }
