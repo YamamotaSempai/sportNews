@@ -283,9 +283,7 @@ FOOTER
 }
 
 .search--widget{
-    padding-left: 15px;
-    padding-bottom: 5px;
-    padding-right: 15px;
+
 }
 .content--post--text{
 	font-size: 17px;
@@ -499,4 +497,22 @@ a:hover{
 }
 .dushs--table{
 	text-align: center;
+}
+.search-main-button{
+
+}
+.search-main-input{
+	display: inline-block;
+}
+.hero-area .advance-search {
+	background: #fff;
+	padding: 40px 30px;
+	border-radius: 3px;
+	margin-bottom: -50px;
+	box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.d-flex {
+	display: -ms-flexbox!important;
+	display: flex!important;
 }
