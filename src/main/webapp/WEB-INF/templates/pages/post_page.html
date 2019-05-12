@@ -38,7 +38,7 @@
                                         <hr>
 
                                         <!-- Preview Image -->
-                                        <img th:src="@{'/img_src/' + *{urlImg}}">
+                                        <img th:src="@{'/img_src/' + ${post.urlImg}}">
 
                                         <hr>
                                         <!-- Post Content -->
@@ -54,7 +54,8 @@
                                              data-options="round,style1,default,absolute,horizontal,size48,counter0"
                                              data-social="vk,ok,mail,fb,print,email" data-mobile="vi,wa,sms"></div>
                                         <!-- /uSocial -->
-                                </div>
+
+
                                 <!-- Sidebar Widgets Column -->
                                 <div class="col-md-3">
                                     <div th:replace="parts/widgets :: widget"></div>
@@ -72,9 +73,10 @@
     <!-- CONTENT END -->
 
 </div>
-<script src="../../../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+</div>
+<script th:src="@{/libs/bootstrap/js/bootstrap.bundle.min.js}"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="../../../libs/slick/slick.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
+<script type="text/javascript" th:src="@{/libs/slick/slick.min.js}"></script>
 </body>
 </html>

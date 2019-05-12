@@ -358,8 +358,10 @@ padding-left: 5px;
  font-size: 20px;
 }
 .lesson--table{
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
 }
+
 .contact--list{
   font-size: 25px;
 }
@@ -380,4 +382,20 @@ padding-left: 5px;
 }
 .vistavka--block{
   font-size: 19px;
+}
+.kff-logo{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.tobol-logo{
+  width: 125px;
+  height: 115px;
+  display: inline-block;
+}
+.links--fed{
+  padding: 15px 0 15px 25px;
+}
+.about-desc{
+  font-size: 18px;
 }

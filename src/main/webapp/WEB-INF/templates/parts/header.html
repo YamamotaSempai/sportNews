@@ -4,8 +4,6 @@
     <div th:fragment="header-css">
         <!--styles-->
         <!-- jQuery -->
-        <!--<script th:src="@{/webjars/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.js}"></script>-->
-        <!--<script th:src="@{/webjars/http_code.jquery.com_jquery-2.2.0.js}" type="text/javascript"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
         <!-- /jQuery -->
@@ -74,7 +72,7 @@
                                                     <li><a th:href="@{/pages/structure}" class="submenu--link">Структура</a></li>
                                                     <li><a th:href="@{/pages/program_development}" class="submenu--link">Программа развития 2018-2022</a></li>
                                                     <li><a th:href="@{/pages/infra_structure}" class="submenu--link">Инфраструктура</a></li>
-                                                    <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
+
                                                 </ul>
                                             </li>
                                             <li class="dropdown">
@@ -97,14 +95,58 @@
                                                     <li><a th:href="@{/pages/dushsa}" class="submenu--link">ДЮСШ</a></li>
                                                     <li><a th:href="@{/pages/young_arbitr}" class="submenu--link">Школа молодого арбитра</a></li>
                                                     <li><a th:href="@{/pages/vistavka}" class="submenu--link">Выставка</a></li>
-                                                    <li><a th:href="@{/pages/lesson}" class="submenu--link">Урок футбола в школе</a></li>
+                                                    <li><a th:href="@{/pages/football_center}" class="submenu--link">Футбольный центр ФК «Тобол»</a></li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a th:href="@{/pages/contacts}" class="navigation__link">Контакты</a>
                                             </li>
                                             <li>
-                                                <a href="#" class="navigation__link" data-toggle="dropdown">Галерея</a>
+                                                <a href="#" class="navigation__link" data-toggle="modal" data-target="#modalContactForm">Обратная связь</a>
+                                                <div class="modal--contactus">
+                                                    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                                                         aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header text-center">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title w-100 font-weight-bold">Форма обратной связи</h4>
+                                                                </div>
+                                                                <div class="modal-body mx-3">
+                                                                    <div class="md-form mb-5">
+                                                                        <i class="fas fa-user prefix grey-text"></i>
+                                                                        <label data-error="wrong" data-success="right" for="form34">Ваше имя</label>
+                                                                        <input type="text" id="form34" class="form-control validate">
+                                                                    </div>
+
+                                                                    <div class="md-form mb-5">
+                                                                        <i class="fas fa-envelope prefix grey-text"></i>
+                                                                        <label data-error="wrong" data-success="right" for="form29">Ваш e-mail</label>
+                                                                        <input type="email" id="form29" class="form-control validate">
+                                                                    </div>
+
+                                                                    <div class="md-form mb-5">
+                                                                        <i class="fas fa-tag prefix grey-text"></i>
+                                                                        <label data-error="wrong" data-success="right" for="form32">Тема обращения</label>
+                                                                        <input type="text" id="form32" class="form-control validate">
+                                                                    </div>
+
+                                                                    <div class="md-form">
+                                                                        <i class="fas fa-pencil prefix grey-text"></i>
+                                                                        <label data-error="wrong" data-success="right" for="form8">Текст сообщения</label>
+                                                                        <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="modal-footer d-flex justify-content-center">
+                                                                    <button class="btn btn-unique">Отправить<i class="fas fa-paper-plane-o ml-1"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </li>
                                             <li>
                                                 <a th:href="@{/pages/about}" class="navigation__link">О сайте</a>
@@ -117,11 +159,14 @@
                         </div>
                     </div>
                 </div>
+
             </nav>
             <!-- NAVIGATION END -->
         </div>
 
     </div>
+
 </div>
+
 </body>
 </html>

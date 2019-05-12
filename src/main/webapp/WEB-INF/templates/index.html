@@ -25,7 +25,7 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <img th:src="@{'/img_src/' + *{post.urlImg}}">
+                                                <img th:src="@{'/img_src/' + ${post.urlImg}}">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="news-title">
@@ -71,13 +71,22 @@
 
                     <div class="row mb-2">
                         <div class="col-md-12">
-                           <div class="center--float"> <nav aria-label="Page navigation example">
-                               <ul class="pagination">
-                                   <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
-                                       <a class="page-link" th:href="@{|home?page=${pageNumber}|}" th:text=${pageNumber}>1</a>
-                                   </li>
-                               </ul>
-                           </nav></div>
+                           <div class="center--float">
+                               <nav aria-label="Page navigation example">
+                                   <ul class="pagination" th:if="${!isSearch}">
+                                       <li class="page-item" th:each="pageNumber : ${pageNumbers}">
+                                           <a class="page-link" th:href="@{|home?page=${pageNumber}|}"
+                                              th:text=${pageNumber}>1</a>
+                                       </li>
+                                   </ul>
+                                   <ul class="pagination" th:if="${isSearch}">
+                                       <li class="page-item" th:each="pageNumber : ${pageNumbers}">
+                                           <a class="page-link" th:href="@{|home?page=${pageNumber}&key_word=${keyWord}|}"
+                                              th:text=${pageNumber}>1</a>
+                                       </li>
+                                   </ul>
+                               </nav>
+                           </div>
                         </div>
                     </div>
                 </div>
