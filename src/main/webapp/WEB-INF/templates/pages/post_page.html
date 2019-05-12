@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Post title</title>
+    <title th:text="${post.title}">ФСКО</title>
     <div th:replace="parts/header :: header-css"></div>
 </head>
 <body>
@@ -17,9 +17,8 @@
                 <!-- Start Shopping-Cart -->
                 <div class="shopping-cart">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="post--content">
-                                <div class="col-lg-9">
+
+                                <div class="col-md-9">
 
                                     <form th:object="${post}" method="get">
                                         <!-- Title -->
@@ -57,12 +56,14 @@
 
 
                                 <!-- Sidebar Widgets Column -->
-                                <div class="col-md-3">
-                                    <div th:replace="parts/widgets :: widget"></div>
-                                </div>
+
                                 </form>
                             </div>
+                        <div class="col-md-3">
+                            <div th:replace="parts/widgets :: widget-for-post"></div>
                         </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- End Shopping-Cart -->
@@ -71,12 +72,9 @@
 
     </div>
     <!-- CONTENT END -->
-
-</div>
-</div>
-<script th:src="@{/libs/bootstrap/js/bootstrap.bundle.min.js}"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
+<!--<script th:src="@{/libs/bootstrap/js/bootstrap.bundle.min.js}"></script>-->
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>-->
 <script type="text/javascript" th:src="@{/libs/slick/slick.min.js}"></script>
 </body>
 </html>
