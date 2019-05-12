@@ -16,12 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -65,10 +63,10 @@ public class MainController {
 
         Page<Post> postOptional;
         if (keyWord.equalsIgnoreCase("")) {
-            postOptional = postService.findAll(pageable);
+            postOptional = postService.findAllByOrderByDate(pageable);
             model.addAttribute("isSearch", false);
         } else {
-            postOptional = postService.findByTitleLike(keyWord, pageable);
+            postOptional = postService.findByTitleLikeOrderByDate(keyWord, pageable);
             model.addAttribute("keyWord", keyWord);
             model.addAttribute("isSearch", true);
         }

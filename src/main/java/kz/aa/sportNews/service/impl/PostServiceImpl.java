@@ -29,7 +29,12 @@ public class PostServiceImpl extends BaseServiceImpl<Post, Long> implements Post
     }
 
     @Override
-    public Page<Post> findByTitleLike(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable) {
-        return repository.findByTitleLike(title, pageable);
+    public Page<Post> findByTitleLikeOrderByDate(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable) {
+        return repository.findByTitleLikeOrderByDateDesc(title, pageable);
+    }
+
+    @Override
+    public Page<Post> findAllByOrderByDate(Pageable pageable) {
+        return repository.findAllByOrderByDateDesc(pageable);
     }
 }

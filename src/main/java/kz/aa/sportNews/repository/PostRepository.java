@@ -17,5 +17,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("delete from Post p where p.id = :id")
     void delete(@Param("id") Long id);
 
-    Page<Post> findByTitleLike(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable);
+    Page<Post> findAllByOrderByDateDesc(Pageable pageable);
+
+    Page<Post> findByTitleLikeOrderByDateDesc(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable);
 }

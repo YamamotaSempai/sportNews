@@ -10,6 +10,6 @@ import javax.validation.constraints.NotEmpty;
 public interface PostService extends BaseService<Post, Long> {
     Page<Post> findAll(Pageable pageable);
     void deletePost(Long id);
-    Page<Post> findByTitleLike(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable);
-
+    Page<Post> findByTitleLikeOrderByDate(@NotEmpty(message = "*Пожалуйста введите название статьи") String title, Pageable pageable);
+    Page<Post> findAllByOrderByDate(Pageable pageable);
 }
