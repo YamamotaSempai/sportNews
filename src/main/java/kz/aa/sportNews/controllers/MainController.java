@@ -1,52 +1,56 @@
 package kz.aa.sportNews.controllers;
 
 import kz.aa.sportNews.dto.SearchForm;
+import kz.aa.sportNews.dto.UserDto;
 import kz.aa.sportNews.model.Post;
 import kz.aa.sportNews.service.PostService;
+import kz.aa.sportNews.service.email.EmailService;
+import kz.aa.sportNews.util.ErrorMessage;
 import kz.aa.sportNews.util.UtilControllers;
+import kz.aa.sportNews.util.ValidationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.mail.MessagingException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class MainController {
 
-    private final PostService postService;
-    private final UtilControllers utilControllers;
-    private final ApplicationContext applicationContext;
-
     @Value(value = "classpath:/pdf")
     private Resource pathResources;
 
+    private final EmailService emailService;
+    private final PostService postService;
+    private final UtilControllers utilControllers;
+
     @Autowired
-    public MainController(PostService postService, UtilControllers utilControllers, ApplicationContext applicationContext) throws IOException {
+    public MainController(PostService postService, UtilControllers utilControllers, EmailService emailService) {
         this.postService = postService;
         this.utilControllers = utilControllers;
-        this.applicationContext = applicationContext;
-
-//        Resource resource = this.applicationContext.getResource("pdf");
-//        pathResources = resource.getFile().getAbsolutePath();
+        this.emailService = emailService;
     }
 
     @RequestMapping("pages/post_page")
@@ -59,6 +63,7 @@ public class MainController {
 
         return "pages/post_page.html";
     }
+
 
     @RequestMapping(value = {"/home", "/"}, method = RequestMethod.GET, produces = MediaType.ALL_VALUE + ";charset=UTF-8")
     public String main(Model model,
@@ -101,6 +106,37 @@ public class MainController {
 
         return new ModelAndView(new RedirectView("/home", true, true, false));
     }
+
+    @PostMapping(value = "sendEmail", produces = "application/json")
+    public @ResponseBody
+    ValidationResponse sendEmailViaAjax(@ModelAttribute(value = "user") UserDto userDto,
+                                        BindingResult result
+    ) throws MessagingException {
+
+        ValidationResponse res = new ValidationResponse();
+        final List<ErrorMessage> errorMessageList = new ArrayList<>();
+
+        if (result.hasErrors()) {
+
+            res.setStatus("FAIL");
+            List<FieldError> allErrors = result.getFieldErrors();
+            final List<ErrorMessage> errorMessages = new ArrayList<>();
+            allErrors.forEach((objectError) -> errorMessages.add(new ErrorMessage(objectError.getField(), objectError.getDefaultMessage())));
+            res.setErrorMessageList(errorMessages);
+
+        } else if (userDto.getContext() != null && userDto.getTitle() != null && userDto.getName() != null) {
+            res.setStatus("SUCCESS");
+            emailService.sendSimpleMessage(userDto.getTitle(), userDto.getContext(), userDto.getName());
+        } else {
+            res.setStatus("FAIL");
+            errorMessageList.add(new ErrorMessage("FORM FAIL", "Введите корректное данные!"));
+        }
+
+        res.setErrorMessageList(errorMessageList);
+
+        return res;
+    }
+
 
     @GetMapping(value = "pages/structure_progress-fb-inKZ")
     public String structureProgressPage() {
